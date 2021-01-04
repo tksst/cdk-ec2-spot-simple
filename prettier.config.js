@@ -1,17 +1,18 @@
 /** @type {import('prettier').Options} */
 module.exports = {
-  arrowParens: 'avoid',
-  printWidth: 100,
-  semi: false,
-  singleQuote: true,
-  trailingComma: 'all',
+  tabWidth: 4,
+  printWidth: 120,  
   overrides: [
+    {
+        files: '*.json',
+        options: {
+          tabWidth: 2,
+        },
+    },
     {
       files: '*.{md,yml}',
       options: {
-        printWidth: 80,
-        semi: true,
-        singleQuote: false,
+        tabWidth: 2,
         trailingComma: 'none',
       },
     },
