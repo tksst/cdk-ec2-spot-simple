@@ -9,6 +9,7 @@
     "lib": ["ES2018"],
     "types": ["node", "jest"],
     "strict": true,
+    "noImplicitReturns": true,
     "importHelpers": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
