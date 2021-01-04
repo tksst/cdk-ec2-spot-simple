@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { main } from '../lib'
+import { main } from "../lib";
 
-main()
+main();
