@@ -19,6 +19,7 @@ module.exports = {
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-explicit-any": "off",
         "import/default": "off",
         "import/order": "off",
         "no-console": "off",
@@ -34,12 +35,6 @@ module.exports = {
                 "import/order": ["error", { "newlines-between": "always" }],
                 "simple-import-sort/imports": "off",
                 "simple-import-sort/exports": "off",
-            },
-        },
-        {
-            files: ["*.{config,d,test}.ts"],
-            rules: {
-                "@typescript-eslint/no-explicit-any": "off",
             },
         },
     ],
