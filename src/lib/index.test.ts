@@ -1,3 +1,12 @@
+/**
+ * These codes are licensed under CC0.
+ * http://creativecommons.org/publicdomain/zero/1.0/deed.ja
+ */
+
+// This file is derived from
+// https://github.com/matzkoh/typescript-npm-starter
+// That says it is licensed under MIT.
+
 import { main } from ".";
 
 describe("main()", () => {

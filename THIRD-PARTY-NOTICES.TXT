@@ -1,0 +1,10 @@
+tkssst/typescript-npm-starter uses third party material from the projects
+listed below. The original copyright notice and the license under which Takashi
+Sato received such third party material are set forth below. Takashi Sato
+reserves all other rights not expressly granted, whether by implication,
+estoppel or otherwise.
+
+License notice for matzkoh/typescript-npm-starter
+-------------------------------
+That says it is licensed under MIT.
+URL: https://github.com/matzkoh/typescript-npm-starter
