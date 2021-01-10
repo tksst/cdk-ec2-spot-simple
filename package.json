@@ -1,8 +1,16 @@
 {
   "name": "typescript-npm-starter",
   "version": "0.0.0-development",
+  "private": true,
   "description": "",
+  "homepage": "https://github.com/tksst/typescript-npm-starter",
+  "repository": "github:tksst/typescript-npm-starter",
   "license": "MIT",
+  "author": {
+    "name": "Takashi Sato",
+    "email": "takashi@tks.st",
+    "url": "https://www.tks.st/"
+  },
   "main": "dist/lib/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
