@@ -1,4 +1,4 @@
-tkssst/typescript-npm-starter uses third party material from the projects
+tkssst/typescript-node-starter uses third party material from the projects
 listed below. The original copyright notice and the license under which Takashi
 Sato received such third party material are set forth below. Takashi Sato
 reserves all other rights not expressly granted, whether by implication,
