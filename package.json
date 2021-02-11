@@ -25,7 +25,7 @@
     "build": "run-p build:*",
     "build:common": "tsc",
     "build:esm": "tsc -p tsconfig.esm.json",
-    "prepare": "npm run build",
+    "prepack": "npm run build",
     "watch": "tsc -w",
     "fix": "run-p fix:*",
     "fix:eslint": "npm run lint:eslint -- --fix",
