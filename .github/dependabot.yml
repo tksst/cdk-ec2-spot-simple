@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule: &schedule
+      interval: weekly
+      day: friday
+    ignore:
+      # @types/node はnodeのバージョンに固定するためメジャーバージョンアップを無視する
+      - dependency-name: "@types/node"
+        update-types:
+          - "version-update:semver-major"
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: *schedule
