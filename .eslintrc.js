@@ -7,7 +7,6 @@ module.exports = {
         "plugin:import/recommended",
         "plugin:import/typescript",
         "prettier",
-        "plugin:prettier/recommended",
     ],
     plugins: ["simple-import-sort"],
     env: {
