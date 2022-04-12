@@ -1,13 +1,7 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
     root: true,
-    extends: [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:import/recommended",
-        "plugin:import/typescript",
-        "prettier",
-    ],
+    extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
     plugins: ["simple-import-sort"],
     env: {
         es6: true,
@@ -19,19 +13,16 @@ module.exports = {
         "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/no-use-before-define": "off",
         "@typescript-eslint/no-explicit-any": "off",
-        "import/default": "off",
-        "import/order": "off",
         "no-console": "off",
         "no-empty": ["error", { allowEmptyCatch: true }],
-        "simple-import-sort/imports": "error",
-        "simple-import-sort/exports": "error",
+        "simple-import-sort/imports": "warn",
+        "simple-import-sort/exports": "warn",
         "sort-imports": "off",
     },
     overrides: [
         {
             files: "*.js",
             rules: {
-                "import/order": ["error", { "newlines-between": "always" }],
                 "simple-import-sort/imports": "off",
                 "simple-import-sort/exports": "off",
             },
