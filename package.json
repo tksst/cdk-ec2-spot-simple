@@ -17,9 +17,6 @@
   "bin": {
     "typescript-node-starter": "dist/bin/index.js"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "run-p build:*",
