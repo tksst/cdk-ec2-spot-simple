@@ -26,6 +26,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: npm ci
+      - run: npx npm@8.6.0 ci
       - run: npx npx npm test
       - run: npx npx npm run build
