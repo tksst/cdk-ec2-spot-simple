@@ -30,7 +30,6 @@
     "lint": "run-p lint:*",
     "lint:eslint": "eslint --ext js,ts .",
     "lint:prettier": "prettier -l .",
-    "lint:type": "tsc --noEmit",
     "test": "run-s lint test:*",
     "test:unit": "jest"
   },
