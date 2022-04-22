@@ -39,7 +39,7 @@
     "@types/jest": "27.4.1",
     "@types/node": "14.18.13",
     "@typescript-eslint/eslint-plugin": "5.20.0",
-    "@typescript-eslint/parser": "5.19.0",
+    "@typescript-eslint/parser": "5.20.0",
     "eslint": "8.13.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "jest": "27.5.1",
