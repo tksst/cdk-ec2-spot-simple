@@ -25,7 +25,10 @@
 
     // Interop Constraints
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+
+    // Completeness
+    "skipLibCheck": true
   },
   "include": ["src"]
 }
