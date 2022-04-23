@@ -1,22 +1,31 @@
 {
   "compilerOptions": {
+    // Type Checking
+    "strict": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Modules
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "types": ["node", "jest"],
+
+    // Emit
+    "importHelpers": true,
+    "sourceMap": true,
+    "outDir": "dist",
+
+    // Language and Environment
     // >= 14       ES2020
     // >= 16       ES2021
     // >= 17       ES2022
     "target": "ES2020",
-    "module": "commonjs",
     "lib": ["ES2020"],
-    "types": ["node", "jest"],
-    "strict": true,
-    "noImplicitReturns": true,
-    "noUncheckedIndexedAccess": true,
-    "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "outDir": "dist"
+
+    // Interop Constraints
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true
   },
   "include": ["src"]
 }
