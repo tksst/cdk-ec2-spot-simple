@@ -9,6 +9,8 @@
     "types": ["node", "jest"],
     "strict": true,
     "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
