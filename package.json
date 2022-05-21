@@ -30,7 +30,7 @@
     "lint": "run-p lint:*",
     "lint:eslint": "eslint --ext js,ts .",
     "lint:prettier": "prettier -l .",
-    "test": "run-s lint test:*",
+    "test": "run-s test:*",
     "test:unit": "jest"
   },
   "devDependencies": {
