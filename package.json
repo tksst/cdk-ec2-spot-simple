@@ -28,8 +28,8 @@
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:prettier": "npm run lint:prettier -- --write",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint --ext js,ts .",
-    "lint:prettier": "prettier -l .",
+    "lint:eslint": "eslint --cache --cache-strategy content --cache-location ./node_modules/.cache/eslint/ --ext js,ts .",
+    "lint:prettier": "prettier --cache -l .",
     "test": "run-s test:*",
     "test:unit": "jest"
   },
