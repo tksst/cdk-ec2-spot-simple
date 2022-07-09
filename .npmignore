@@ -2,5 +2,13 @@
 !/dist
 *.test.js
 *.test.js.map
+*.test.mjs
+*.test.mjs.map
+*.test.cjs
+*.test.cjs.map
 *.test.d.ts
 *.test.d.ts.map
+*.test.d.mts
+*.test.d.mts.map
+*.test.d.cts
+*.test.d.cts.map
