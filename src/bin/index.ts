@@ -6,6 +6,6 @@
 
 import "source-map-support/register";
 
-import { main } from "../lib";
+import { main } from "../lib/main/main";
 
 main();
