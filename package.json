@@ -34,8 +34,8 @@
     "test:unit": "jest"
   },
   "devDependencies": {
+    "@jest/globals": "28.1.2",
     "@tksst/eslint-prettier-meta": "1.2.0",
-    "@types/jest": "28.1.4",
     "@types/node": "14.18.21",
     "better-typescript-lib": "2.1.0",
     "jest": "28.1.2",

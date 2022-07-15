@@ -7,6 +7,8 @@
 // https://github.com/matzkoh/typescript-npm-starter
 // That says it is licensed under MIT.
 
+import { describe, expect, it, jest } from "@jest/globals";
+
 import { main } from ".";
 
 describe("main()", () => {

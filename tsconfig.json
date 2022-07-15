@@ -8,7 +8,7 @@
     // Modules
     "module": "commonjs",
     "moduleResolution": "node",
-    "types": ["node", "jest"],
+    "types": ["node"],
 
     // Emit
     "importHelpers": true,
