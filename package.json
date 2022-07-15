@@ -19,7 +19,7 @@
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "run-p build:*",
+    "build": "run-p --continue-on-error --print-label build:*",
     "build:common": "tsc",
     "build:esm": "tsc -p tsconfig.esm.json",
     "prepack": "npm run build",
@@ -27,8 +27,8 @@
     "fix": "run-s fix:*",
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:prettier": "npm run lint:prettier -- --write",
-    "lint": "run-p lint:*",
-    "lint:eslint": "eslint --cache --cache-strategy content --cache-location ./node_modules/.cache/eslint/ --ext .js,.cjs,.mjs,.ts,.cts,.mts .",
+    "lint": "run-p --continue-on-error --print-label lint:*",
+    "lint:eslint": "eslint --color --cache --cache-strategy content --cache-location ./node_modules/.cache/eslint/ --ext .js,.cjs,.mjs,.ts,.cts,.mts .",
     "lint:prettier": "prettier --cache -l .",
     "test": "run-s test:*",
     "test:unit": "jest"
