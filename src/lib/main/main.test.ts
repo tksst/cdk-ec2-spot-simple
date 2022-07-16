@@ -9,7 +9,7 @@
 
 import { describe, expect, it, jest } from "@jest/globals";
 
-import { main } from "./main";
+import { main } from "./main.js";
 
 describe("main()", () => {
     it("print message", () => {

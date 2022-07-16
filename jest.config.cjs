@@ -5,4 +5,7 @@ module.exports = {
     collectCoverage: true,
     errorOnDeprecated: true,
     resetMocks: true,
+    moduleNameMapper: {
+        "^(\\.{1,2}/.*)\\.js$": "$1",
+    },
 };
