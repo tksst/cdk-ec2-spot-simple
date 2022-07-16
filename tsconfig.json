@@ -4,6 +4,7 @@
     "strict": true,
     "noImplicitReturns": true,
     "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
 
     // Modules
     "module": "commonjs",
@@ -11,7 +12,6 @@
     "types": ["node"],
 
     // Emit
-    "importHelpers": true,
     "sourceMap": true,
     "outDir": "dist",
 
@@ -21,7 +21,6 @@
     // >= 17       ES2022
     "target": "ES2020",
     "lib": ["ES2020"],
-    "experimentalDecorators": true,
 
     // Interop Constraints
     "forceConsistentCasingInFileNames": true,
