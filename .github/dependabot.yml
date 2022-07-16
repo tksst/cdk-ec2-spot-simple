@@ -3,8 +3,7 @@ updates:
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
-      day: friday
+      interval: daily
     ignore:
       # @types/node はnodeのバージョンに固定するためメジャーバージョンアップを無視する
       - dependency-name: "@types/node"
@@ -13,5 +12,4 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
-      day: friday
+      interval: daily
