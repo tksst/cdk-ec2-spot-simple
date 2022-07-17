@@ -55,7 +55,7 @@
   "dependencies": {
     "source-map-support": "0.5.21"
   },
-  "packageManager": "npm@8.13.2",
+  "packageManager": "npm@8.14.0",
   "engines": {
     "node": ">= 14"
   }
