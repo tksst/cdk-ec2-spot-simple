@@ -1,6 +1,14 @@
 /** @type {import('@jest/types/build/Config').InitialOptions} */
 module.exports = {
-    preset: "ts-jest",
+    transform: {
+        "^.+\\.tsx?$": [
+            "esbuild-jest",
+            {
+                sourcemap: true,
+                target: "node14",
+            },
+        ],
+    },
     testMatch: ["<rootDir>/src/**/*.test.ts"],
     collectCoverage: true,
     errorOnDeprecated: true,
