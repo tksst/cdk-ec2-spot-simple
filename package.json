@@ -11,25 +11,31 @@
     "email": "takashi@tks.st",
     "url": "https://www.tks.st/"
   },
-  "main": "dist/lib/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "type": "module",
+  "exports": {
+    "import": "./dist/lib/index.js",
+    "require": "./dist/lib/index.cjs"
+  },
+  "types": "./dist/lib/index.d.ts",
   "bin": {
-    "typescript-node-starter": "dist/bin/index.js"
+    "typescript-node-starter": "./dist/bin/index.js"
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "run-p --continue-on-error --print-label build:*",
-    "build:common": "tsc",
-    "build:esm": "tsc -p tsconfig.esm.json",
+    "build": "run-s --continue-on-error build:*",
+    "build:lib": "tsup src/lib/index.ts --sourcemap --minify --target node14 --dts --format esm,cjs --no-splitting --out-dir=dist/lib",
+    "build:bin": "tsup src/bin/index.ts --sourcemap --minify --target node14 --format esm --no-splitting --out-dir=dist/bin",
     "prepack": "npm run build",
-    "watch": "tsc -w",
+    "watch": "run-p --continue-on-error --print-label watch:*",
+    "watch:lib": "npm run build:lib -- --watch",
+    "watch:bin": "npm run build:bin -- --watch",
     "fix": "run-s fix:*",
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:prettier": "npm run lint:prettier -- --write",
     "lint": "run-p --continue-on-error --print-label lint:*",
     "lint:eslint": "eslint --color --cache --cache-strategy content --cache-location ./node_modules/.cache/eslint/ --ext .js,.cjs,.mjs,.ts,.cts,.mts .",
     "lint:prettier": "prettier --cache -l .",
+    "lint:tsc": "tsc --noEmit",
     "test": "run-s test:*",
     "test:unit": "jest"
   },
@@ -43,6 +49,7 @@
     "jest": "28.1.3",
     "npm-run-all": "4.1.5",
     "rimraf": "3.0.2",
+    "tsup": "6.1.3",
     "typescript": "4.7.4"
   },
   "dependencies": {
