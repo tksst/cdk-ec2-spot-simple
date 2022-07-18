@@ -48,24 +48,26 @@ If you run it on windows, you can use [cross-env](https://github.com/kentcdodds/
 
 ### 2. Modify jest.config.cjs
 
-1. Make esbuild-jest convert `.ts` files to ESM.
-1. Tell Jest to run the `.ts` file as an ESM.
+Tell Jest to run the `.ts` file as an ESM.
 
 Modify jest.config.cjs like this:
 
 ```diff
+module.exports = {
++   extensionsToTreatAsEsm: [".ts"],
     transform: {
         "^.+\\.tsx?$": [
-            "esbuild-jest",
+            "@swc/jest",v
             {
-                sourcemap: true,
-                target: "node14",
-+               format: "esm",
+                jsc: {
+                    target: "es2020",
+                },
             },
         ],
     },
-+   extensionsToTreatAsEsm: [".ts"],
 ```
+
+Note that it seems that @swc/jest automatically detects the ESM mode and changes the output format.
 
 ## License
 

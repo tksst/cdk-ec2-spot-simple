@@ -2,10 +2,11 @@
 module.exports = {
     transform: {
         "^.+\\.tsx?$": [
-            "esbuild-jest",
+            "@swc/jest",
             {
-                sourcemap: true,
-                target: "node14",
+                jsc: {
+                    target: "es2020",
+                },
             },
         ],
     },
