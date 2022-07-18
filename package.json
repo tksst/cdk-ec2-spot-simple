@@ -23,8 +23,8 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "run-s --continue-on-error build:*",
-    "build:lib": "tsup src/lib/index.ts --sourcemap --minify --target node14 --dts --format esm,cjs --no-splitting --out-dir=dist/lib",
-    "build:bin": "tsup src/bin/index.ts --sourcemap --minify --target node14 --format esm --no-splitting --out-dir=dist/bin",
+    "build:lib": "tsup src/lib/index.ts --sourcemap --minify-whitespace --minify-syntax --target node14 --dts --format esm,cjs --no-splitting --out-dir=dist/lib",
+    "build:bin": "tsup src/bin/index.ts --sourcemap --minify-whitespace --minify-syntax --target node14 --format esm --no-splitting --out-dir=dist/bin",
     "prepack": "npm run build",
     "watch": "run-p --continue-on-error --print-label watch:*",
     "watch:lib": "npm run build:lib -- --watch",

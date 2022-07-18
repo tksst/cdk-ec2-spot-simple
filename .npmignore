@@ -1,5 +1,7 @@
 /*
 !/dist
+# Include for source reference
+!/src
 *.test.js
 *.test.js.map
 *.test.mjs
