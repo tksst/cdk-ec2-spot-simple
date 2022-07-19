@@ -1,4 +1,4 @@
-/** @type {import('@jest/types/build/Config').InitialOptions} */
+/** @type {import("@jest/types").Config.InitialOptions} */
 module.exports = {
     transform: {
         "^.+\\.tsx?$": [
