@@ -52,19 +52,11 @@ Tell Jest to run the `.ts` file as an ESM.
 
 Modify jest.config.cjs like this:
 
-```diff
+```javascript
 module.exports = {
-+   extensionsToTreatAsEsm: [".ts"],
-    transform: {
-        "^.+\\.tsx?$": [
-            "@swc/jest",v
-            {
-                jsc: {
-                    target: "es2020",
-                },
-            },
-        ],
-    },
+  ...require("@tksst/typescript-starter/jest.config.cjs"),
+  extensionsToTreatAsEsm: [".ts"]
+};
 ```
 
 Note that it seems that @swc/jest automatically detects the ESM mode and changes the output format.

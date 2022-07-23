@@ -1,33 +1,4 @@
 {
-  "compilerOptions": {
-    // Type Checking
-    "strict": true,
-    "noImplicitReturns": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // Modules
-    "module": "ES2022",
-    "moduleResolution": "Node16",
-    "types": ["node"],
-
-    // Emit
-    "sourceMap": true,
-    "outDir": "dist",
-
-    // Language and Environment
-    // >= 14       ES2020
-    // >= 16       ES2021
-    // >= 17       ES2022
-    "target": "ES2020",
-    "lib": ["ES2020"],
-
-    // Interop Constraints
-    "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
-
-    // Completeness
-    "skipLibCheck": true
-  },
+  "extends": "@tksst/typescript-starter/tsconfig.json",
   "include": ["src"]
 }
