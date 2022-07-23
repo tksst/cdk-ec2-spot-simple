@@ -1,10 +1,10 @@
 {
-  "name": "typescript-node-starter",
+  "name": "typescript-starter",
   "version": "0.0.0-development",
   "private": true,
   "description": "",
-  "homepage": "https://github.com/tksst/typescript-node-starter",
-  "repository": "github:tksst/typescript-node-starter",
+  "homepage": "https://github.com/tksst/typescript-starter-template",
+  "repository": "github:tksst/typescript-starter-template",
   "license": "CC0",
   "author": {
     "name": "Takashi Sato",
