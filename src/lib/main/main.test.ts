@@ -7,9 +7,6 @@
 // https://github.com/matzkoh/typescript-npm-starter
 // That says it is licensed under MIT.
 
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { describe, expect, it, jest } from "@jest/globals";
-
 import { main } from "./main.js";
 
 describe("main()", () => {
