@@ -12,5 +12,13 @@ module.exports = {
         node: true,
         jest: true,
     },
+    parserOptions: {
+        // Your project environment settings here.
+        // See ESLint document of "Specifying Parser Options":
+        // https://eslint.org/docs/latest/user-guide/configuring/language-options#specifying-parser-options
+
+        // example:
+        sourceType: "module",
+    },
     extends: "@tksst",
 };
