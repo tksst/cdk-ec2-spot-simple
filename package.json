@@ -34,7 +34,7 @@
     "fix:prettier": "npm run lint:prettier -- --write",
     "lint": "run-p --continue-on-error --print-label lint:*",
     "lint:eslint": "eslint --color --cache --cache-strategy content --cache-location ./node_modules/.cache/eslint/ --ext .js,.cjs,.mjs,.ts,.cts,.mts .",
-    "lint:prettier": "prettier --cache -l .",
+    "lint:prettier": "prettier -l .",
     "lint:tsc": "tsc --noEmit",
     "test": "run-s test:*",
     "test:unit": "jest"
