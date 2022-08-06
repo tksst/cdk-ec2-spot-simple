@@ -1,19 +1,14 @@
-/**
- * These codes are licensed under CC0.
- * http://creativecommons.org/publicdomain/zero/1.0/deed.ja
- */
-
-// This file is derived from
-// https://github.com/matzkoh/typescript-npm-starter
-// That says it is licensed under MIT.
-
 import { main } from "./main.js";
 
 describe("main()", () => {
     it("print message", () => {
-        const log = jest.spyOn(console, "log").mockReturnValue();
+        let consoleMessage: unknown;
+
+        const log = jest.spyOn(console, "log").mockImplementation((message: unknown) => {
+            consoleMessage = message;
+        });
         main();
-        expect(log).nthCalledWith(1, "This is a template for Node.js CLI or Library project in TypeScript.");
+        expect(consoleMessage).toBe("This is a template for Node.js CLI or Library project in TypeScript.");
         log.mockRestore();
     });
 });
