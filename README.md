@@ -61,6 +61,16 @@ module.exports = {
 
 Note that it seems that @swc/jest automatically detects the ESM mode and changes the output format.
 
+## Note about ts-node or something
+
+This template does not mention [ts-node](https://typestrong.org/ts-node/), [esbuild-register](https://github.com/egoist/esbuild-register), [tsx](https://github.com/esbuild-kit/tsx) or other similar software.
+
+The current versions of them do not act in the same way as the official TypeScript compiler.
+
+ts-node and esbuild-register have a different import resolution mechanism from the tsc and will not run if you use `.js` extension in the import statement.
+
+tsx is somewhat better than these, but I saw that it does not work well when importing CommonJs from ESM.
+
 ## License
 
 These codes are licensed under CC0.
