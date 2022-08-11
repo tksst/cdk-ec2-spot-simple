@@ -23,8 +23,8 @@
   "scripts": {
     "prebuild": "node ./node_modules/@tksst/typescript-starter/scripts/rmrf.mjs ./dist/",
     "build": "run-s --continue-on-error build:*",
-    "build:lib": "tsup src/lib/index.ts --config ./tsup.config.lib.js",
-    "build:bin": "tsup src/bin/index.ts --config ./tsup.config.bin.js",
+    "build:lib": "tsup --config ./tsup.config.lib.js",
+    "build:bin": "tsup --config ./tsup.config.bin.js",
     "prepack": "npm run build",
     "watch": "run-p --continue-on-error --print-label watch:*",
     "watch:lib": "npm run build:lib -- --watch",

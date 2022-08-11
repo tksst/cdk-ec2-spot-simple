@@ -3,4 +3,7 @@
 import { binOptions } from "@tksst/typescript-starter/tsup-config.mjs";
 import { defineConfig } from "tsup";
 
-export default defineConfig(binOptions);
+export default defineConfig({
+    ...binOptions,
+    entry: ["src/bin/index.ts"],
+});

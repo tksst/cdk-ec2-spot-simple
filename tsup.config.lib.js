@@ -3,4 +3,7 @@
 import { libOptions } from "@tksst/typescript-starter/tsup-config.mjs";
 import { defineConfig } from "tsup";
 
-export default defineConfig(libOptions);
+export default defineConfig({
+    ...libOptions,
+    entry: ["src/lib/index.ts"],
+});
