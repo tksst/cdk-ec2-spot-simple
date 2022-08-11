@@ -21,7 +21,7 @@
     "typescript-node-starter": "./dist/bin/index.js"
   },
   "scripts": {
-    "prebuild": "node ./node_modules/@tksst/typescript-starter/scripts/rmrf.mjs ./dist/",
+    "prebuild": "tss-rmrf ./dist/",
     "build": "run-s --continue-on-error build:*",
     "build:lib": "tsup --config ./tsup.config.lib.js",
     "build:bin": "tsup --config ./tsup.config.bin.js",
