@@ -26,6 +26,7 @@
     "build:lib": "tsup --config ./tsup.config.lib.js",
     "build:bin": "tsup --config ./tsup.config.bin.js",
     "prepack": "npm run build",
+    "prewatch": "npm run prebuild",
     "watch": "run-p --continue-on-error --print-label watch:*",
     "watch:lib": "npm run build:lib -- --watch",
     "watch:bin": "npm run build:bin -- --watch",
