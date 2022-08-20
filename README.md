@@ -1,6 +1,6 @@
-# typescript-node-starter
+# typescript-starter-template
 
-A template project for Node.js library and/or executable.
+A template project for javascript library and/or executable.
 
 ## npm scripts
 
