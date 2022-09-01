@@ -61,7 +61,7 @@
   "dependencies": {
     "source-map-support": "0.5.21"
   },
-  "packageManager": "npm@8.18.0",
+  "packageManager": "npm@8.19.1",
   "engines": {
     "node": ">= 14"
   }
