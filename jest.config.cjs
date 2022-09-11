@@ -1,1 +1,1 @@
-module.exports = require("@tksst/typescript-starter/jest.config.cjs");
+module.exports = require("@tksst/typescript-starter-configs/jest.config.cjs");
