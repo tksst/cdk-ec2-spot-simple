@@ -38,7 +38,7 @@
     "lint:eslint": "eslint --color --cache --cache-strategy content --cache-location ./node_modules/.cache/eslint/ --ext .js,.cjs,.mjs,.ts,.cts,.mts .",
     "lint:tsc": "tsc --noEmit",
     "test": "run-s test:*",
-    "test:unit": "jest"
+    "test:unit": "jest --ci"
   },
   "devDependencies": {
     "@swc/core": "1.3.0",
