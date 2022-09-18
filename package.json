@@ -21,18 +21,17 @@
     "typescript-node-starter": "./dist/bin/index.js"
   },
   "scripts": {
-    "prebuild": "tss-rmrf ./dist/",
-    "build": "run-s --continue-on-error build:*",
+    "clean": "tss-rmrf ./dist/",
+    "build": "run-s --continue-on-error clean build:*",
     "build:lib": "tsup --config ./tsup.config.lib.js",
     "build:bin": "tsup --config ./tsup.config.bin.js",
-    "prepack": "npm run build",
-    "prewatch": "npm run prebuild",
-    "watch": "run-p --continue-on-error --print-label watch:*",
-    "watch:lib": "npm run build:lib -- --watch",
-    "watch:bin": "npm run build:bin -- --watch",
+    "prepack": "pnpm build",
+    "watch": "npm-run-all clean --parallel --continue-on-error --print-label watch:*",
+    "watch:lib": "pnpm build:lib --watch",
+    "watch:bin": "pnpm build:bin --watch",
     "fix": "run-s --continue-on-error fix:*",
-    "fix:prettier": "npm run lint:prettier -- --write",
-    "fix:eslint": "npm run lint:eslint -- --fix",
+    "fix:prettier": "pnpm lint:prettier --write",
+    "fix:eslint": "pnpm lint:eslint --fix",
     "lint": "run-p --continue-on-error --print-label lint:*",
     "lint:prettier": "prettier --check .",
     "lint:eslint": "eslint --color --cache --cache-strategy content --cache-location ./node_modules/.cache/eslint/ --ext .js,.cjs,.mjs,.ts,.cts,.mts .",
@@ -62,7 +61,7 @@
   "dependencies": {
     "source-map-support": "0.5.21"
   },
-  "packageManager": "npm@8.19.1",
+  "packageManager": "pnpm@7.11.0",
   "engines": {
     "node": ">= 14"
   }

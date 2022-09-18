@@ -32,26 +32,23 @@ jobs:
       - name: Checkout the source
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3.0.2
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@10693b3829bf86eb2572aef5f3571dcf5ca9287d # tag=v2.2.2
+
       - name: Setup Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
         uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3.4.1
         with:
           node-version: ${{ matrix.node-version }}
-          cache: npm
-
-      - name: Enable corepack
-        run: corepack enable npm
-
-      - name: Print npm version
-        run: npm --version
+          cache: pnpm
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: npm run build
+        run: pnpm build
 
       - name: Lint
-        run: npm run lint
+        run: pnpm lint
 
       - name: Test
-        run: npm test
+        run: pnpm test
