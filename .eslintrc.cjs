@@ -8,7 +8,7 @@ module.exports = {
         // https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments
 
         // example:
-        es2020: true,
+        es2022: true,
         node: true,
         jest: true,
     },
@@ -19,6 +19,7 @@ module.exports = {
 
         // example:
         sourceType: "module",
+        ecmaVersion: "latest",
     },
     extends: "@tksst",
 };
