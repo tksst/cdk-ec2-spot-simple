@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@secretlint/secretlint-rule-preset-recommend': 5.2.4
-  '@swc/core': 1.3.10
+  '@secretlint/secretlint-rule-preset-recommend': 5.3.0
+  '@swc/core': 1.3.11
   '@swc/jest': 0.2.23
   '@tksst/eslint-config': 4.1.0
   '@tksst/prettier-config': 1.1.0
@@ -17,7 +17,7 @@ specifiers:
   jest: 29.2.2
   npm-run-all: 4.1.5
   prettier: 2.7.1
-  secretlint: 5.2.4
+  secretlint: 5.3.0
   source-map-support: 0.5.21
   tsup: 6.3.0
   typescript: 4.8.4
@@ -26,9 +26,9 @@ dependencies:
   source-map-support: 0.5.21
 
 devDependencies:
-  '@secretlint/secretlint-rule-preset-recommend': 5.2.4
-  '@swc/core': 1.3.10
-  '@swc/jest': 0.2.23_@swc+core@1.3.10
+  '@secretlint/secretlint-rule-preset-recommend': 5.3.0
+  '@swc/core': 1.3.11
+  '@swc/jest': 0.2.23_@swc+core@1.3.11
   '@tksst/eslint-config': 4.1.0_atjjz6ariav74t435ladewqjve
   '@tksst/prettier-config': 1.1.0_prettier@2.7.1
   '@tksst/typescript-starter-configs': 1.0.0
@@ -42,8 +42,8 @@ devDependencies:
   jest: 29.2.2
   npm-run-all: 4.1.5
   prettier: 2.7.1
-  secretlint: 5.2.4
-  tsup: 6.3.0_bp7b565h4vmear4gmv5hsz6kte
+  secretlint: 5.3.0
+  tsup: 6.3.0_shqznlriov6afx6xf3bowxn3ra
   typescript: 4.8.4
 
 packages:
@@ -877,19 +877,19 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@secretlint/config-creator/5.2.4:
-    resolution: {integrity: sha512-7gUo+AjfR7nb3EHZqREBP0FFh7yDdMbV9Ucd0SxtZANSzIPQzWxsmTXZDh09+JD8yhfjCmOcDkxfJyMjZLmjlQ==}
+  /@secretlint/config-creator/5.3.0:
+    resolution: {integrity: sha512-FxL1rVxOMCIiUtwc0cm1vRj2IJOhk2SDH35DGtELs7bX+wa4jhoKVnm+2T8P87sybJXMkiKdKWnPzf3nFr6WUA==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/types': 5.2.4
+      '@secretlint/types': 5.3.0
     dev: true
 
-  /@secretlint/config-loader/5.2.4:
-    resolution: {integrity: sha512-NNt12S1Re0kqMF5YtRUiSf4k/+QbKD7QUDftPuUoWk81vEBFHvEZetMuGDhtrAhjXxNyPXDsXTWePo1Y2H0fnQ==}
+  /@secretlint/config-loader/5.3.0:
+    resolution: {integrity: sha512-FqUMqbHCopeT1trBdUgdkmYFWleIqxyUQydKi8s5U67s4CnhXnMaLJpgTwcvFwHv2ymTjTpVU62nCt1AITM2CA==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/profiler': 5.2.4
-      '@secretlint/types': 5.2.4
+      '@secretlint/profiler': 5.3.0
+      '@secretlint/types': 5.3.0
       ajv: 8.11.0
       debug: 4.3.4
       rc-config-loader: 4.1.1
@@ -898,23 +898,23 @@ packages:
       - supports-color
     dev: true
 
-  /@secretlint/core/5.2.4:
-    resolution: {integrity: sha512-GViAfQs7IBjgm1YYwloYFkiBGsvmB/we5LAXztvsMGRUvfq6lhpeEYKSa+xCMSSgxC6T+40YzggflR4ZvOSZ6A==}
+  /@secretlint/core/5.3.0:
+    resolution: {integrity: sha512-j37r5SEUFmNCp+VIYade6PHFQLBwvu7NKg3neyzK6VNZlC3PGiDvWVZaeMmQF4MtlTemztrypJPn460m8FTGXQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/profiler': 5.2.4
-      '@secretlint/types': 5.2.4
+      '@secretlint/profiler': 5.3.0
+      '@secretlint/types': 5.3.0
       debug: 4.3.4
       structured-source: 3.0.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@secretlint/formatter/5.2.4:
-    resolution: {integrity: sha512-YRkRDCK6EXOikMCUrCJDlSD38NHH/iWWHAOqr3qqOBZObWOFLTwPHp7woa6hYmkEwby6xniQwRoAI/DyGytdDA==}
+  /@secretlint/formatter/5.3.0:
+    resolution: {integrity: sha512-iZ/U404hf9boSo7Cy0/uGoXA0Exh1+Vc+g75HtbUU1a9eDnQprG+fAaAknekaKhRq4Cs4yR7O3se8IioPtLPZA==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/types': 5.2.4
+      '@secretlint/types': 5.3.0
       '@textlint/linter-formatter': 12.2.2
       '@textlint/types': 12.2.2
       chalk: 4.1.2
@@ -928,122 +928,122 @@ packages:
       - supports-color
     dev: true
 
-  /@secretlint/node/5.2.4:
-    resolution: {integrity: sha512-Q37OkDWkXIcKpiU3YHYUQKflkN/+EJYzzPK2BlP0uR95FT5Ic+wucLSLOC4Bak6jEhZEGKCqkjZiFum5ZK57cw==}
+  /@secretlint/node/5.3.0:
+    resolution: {integrity: sha512-sM84NcTXaehE2gz1ZXIRCpBYG7VyRTa2eqXAPzhDWiyoCZ0bKieMe72Y4RBPjrRiKGgiQlR3JyjOuhqP/zyFBA==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/config-loader': 5.2.4
-      '@secretlint/core': 5.2.4
-      '@secretlint/formatter': 5.2.4
-      '@secretlint/profiler': 5.2.4
-      '@secretlint/source-creator': 5.2.4
+      '@secretlint/config-loader': 5.3.0
+      '@secretlint/core': 5.3.0
+      '@secretlint/formatter': 5.3.0
+      '@secretlint/profiler': 5.3.0
+      '@secretlint/source-creator': 5.3.0
       debug: 4.3.4
       p-map: 4.0.0
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@secretlint/profiler/5.2.4:
-    resolution: {integrity: sha512-0cQzE87DQlM0+Fcu9cT+oSBKXSOgwdPZ6CbNW+eyWs2U1B4+8sQ672/orNTRJ2VSeXUwRq110n5KVHQe7k0WAQ==}
+  /@secretlint/profiler/5.3.0:
+    resolution: {integrity: sha512-iCNr7z/VofSclFgGjQVee8GfNT3F+GSipijF2m55w8p0UQ671fyIfDRNo9xRhvRAv5vuZ+OXOM/qS7wEnA87Uw==}
     dev: true
 
-  /@secretlint/secretlint-rule-aws/5.2.4:
-    resolution: {integrity: sha512-4kQjzd8a+US21wpVOIW/pZNRgkBJbZp6Mt7xW5fsffIve715V0bMPfAY0CUc319MtSfmWP1L8Kiu72xMluBsQQ==}
+  /@secretlint/secretlint-rule-aws/5.3.0:
+    resolution: {integrity: sha512-axfARZd+XKtwDvKJAV0waimFyfnhiGMSat0kEh3P+dEEdhMi9OOHln0e3Q3W0ItePfGF9O0yLFfPBkBG9YvuHg==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/types': 5.2.4
+      '@secretlint/types': 5.3.0
       '@textlint/regexp-string-matcher': 2.0.2
       regx: 1.0.4
     dev: true
 
-  /@secretlint/secretlint-rule-basicauth/5.2.4:
-    resolution: {integrity: sha512-vXuPi8EB2t0cS3HL4Qb3LWrTUN5ar57mEfzITulNdrWCOKqGegf+HowrEY+yBbAeACqUovFNxVpWmA5b6SlHoQ==}
+  /@secretlint/secretlint-rule-basicauth/5.3.0:
+    resolution: {integrity: sha512-HJeXiRd6OwfOA9eA5HvyHec4vQWxwSzhkcvqRXODrpEsrKOW+PN0zC2rZK8iou9wiDOoHHWM5LbzfNM+LnndHA==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/types': 5.2.4
+      '@secretlint/types': 5.3.0
       '@textlint/regexp-string-matcher': 2.0.2
     dev: true
 
-  /@secretlint/secretlint-rule-filter-comments/5.2.4:
-    resolution: {integrity: sha512-wTyjwZhqTR67irrPhTf/+8f+ndoJ1o9P4aasKTAJIBP/swzCi4ggV2y4R0VjqmT2lcRex+E4uoa3J+Ra4zncrA==}
+  /@secretlint/secretlint-rule-filter-comments/5.3.0:
+    resolution: {integrity: sha512-3cnCZCOqcOrS7xCWvAqbbnNYlLx5NrnYZRZa6kIna1aMYyyeoTR7Z42wiYwZoB+Y8mrmUPg2ZBbDVldLGMWj8g==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/types': 5.2.4
+      '@secretlint/types': 5.3.0
     dev: true
 
-  /@secretlint/secretlint-rule-gcp/5.2.4:
-    resolution: {integrity: sha512-Dv2Yf/8Kv+kJd2HPN4SFpi4Nhlt8emvI9sQ1LgaLS5F5eSKpBvVQbyUyXfJgC6olKS4Pt2qcIYTxkgCpHXmOPw==}
+  /@secretlint/secretlint-rule-gcp/5.3.0:
+    resolution: {integrity: sha512-yjUHWN5L2VHOlmowYc3Cbox46Vf2as+m+ni5j5eYqzwDh5c7ujTCkmSp2JBX+ciTTMlqWC1uwksERGfn6FLlxA==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/types': 5.2.4
+      '@secretlint/types': 5.3.0
       '@textlint/regexp-string-matcher': 2.0.2
       node-forge: 1.3.1
     dev: true
 
-  /@secretlint/secretlint-rule-github/5.2.4:
-    resolution: {integrity: sha512-mdIbDGu/bNAbatuweivjCCG8Et72nb3nblwDNBAf1wRrOJwMYiu/ghUw6lYhmtQW4lOKrlUpYI/Hb8yKvDpK8A==}
+  /@secretlint/secretlint-rule-github/5.3.0:
+    resolution: {integrity: sha512-GkgQfakA+k5bBgtnDPFjDkOirDRvykb9QCkJLp4/pgW4ZWFewS13vRPcJNoQfA4ymyjtje0gJ7+UzHOgkzLqgw==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/types': 5.2.4
+      '@secretlint/types': 5.3.0
       '@textlint/regexp-string-matcher': 2.0.2
     dev: true
 
-  /@secretlint/secretlint-rule-npm/5.2.4:
-    resolution: {integrity: sha512-pYQuz7YckwVVQOk3kKAKza0OMQ5TXz+IghS2+70GZYBgzB+pTKOqV5hP9/C2qgeTzG0iJ1Ydd8DZKkV6k/8Ytg==}
+  /@secretlint/secretlint-rule-npm/5.3.0:
+    resolution: {integrity: sha512-1Rw4Lr8AqhScDw9EtWx7/QVOT2tzQBN8ttcw16cEtwD0eUrE9sXLIW7rLAkC/21nSfhTT/aiLUYSDvWednfg5A==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/types': 5.2.4
+      '@secretlint/types': 5.3.0
       '@textlint/regexp-string-matcher': 2.0.2
     dev: true
 
-  /@secretlint/secretlint-rule-preset-recommend/5.2.4:
-    resolution: {integrity: sha512-5dM7vqmfgbWZJDLdiOWtKiaxp+VJsbGTg+B2TaKAgstGlJpghACLrKWUODUt5YRVuE3DRf+BJJ0J51ygU2EgiA==}
+  /@secretlint/secretlint-rule-preset-recommend/5.3.0:
+    resolution: {integrity: sha512-b/73Et1G8uZr+4y/tOqHkH9YfjfSiney7Nl2XufoGqVB/gt27vfCSsj8XYMtHxrH3VffvEJ837txOtRDUHX3HQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/secretlint-rule-aws': 5.2.4
-      '@secretlint/secretlint-rule-basicauth': 5.2.4
-      '@secretlint/secretlint-rule-filter-comments': 5.2.4
-      '@secretlint/secretlint-rule-gcp': 5.2.4
-      '@secretlint/secretlint-rule-github': 5.2.4
-      '@secretlint/secretlint-rule-npm': 5.2.4
-      '@secretlint/secretlint-rule-privatekey': 5.2.4
-      '@secretlint/secretlint-rule-sendgrid': 5.2.4
-      '@secretlint/secretlint-rule-slack': 5.2.4
+      '@secretlint/secretlint-rule-aws': 5.3.0
+      '@secretlint/secretlint-rule-basicauth': 5.3.0
+      '@secretlint/secretlint-rule-filter-comments': 5.3.0
+      '@secretlint/secretlint-rule-gcp': 5.3.0
+      '@secretlint/secretlint-rule-github': 5.3.0
+      '@secretlint/secretlint-rule-npm': 5.3.0
+      '@secretlint/secretlint-rule-privatekey': 5.3.0
+      '@secretlint/secretlint-rule-sendgrid': 5.3.0
+      '@secretlint/secretlint-rule-slack': 5.3.0
     dev: true
 
-  /@secretlint/secretlint-rule-privatekey/5.2.4:
-    resolution: {integrity: sha512-+oopvwvFSEWy4GUiFXU79anabR9HJ3pD43MDZcUTMmch34azSKzA8lJ6HtGEI/Pn7YTLrLa3i/rhut0GN0MWoA==}
+  /@secretlint/secretlint-rule-privatekey/5.3.0:
+    resolution: {integrity: sha512-d8be2U7+fXOGKkDRRKdP+oKoRwvJ1aXZ9bu4qxQgPoZSAo/L0CFOn/dLskpC1aGs+Blo2LRHR1qwrMuxH1EW9w==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
       '@textlint/regexp-string-matcher': 2.0.2
     dev: true
 
-  /@secretlint/secretlint-rule-sendgrid/5.2.4:
-    resolution: {integrity: sha512-VombEmikqUgruNHoc83MfUrjkWOHp7Nth2UhbIULUWroKoN2JxF95fQp4/EppWTzpPTraiif3x9wtiaFKlVIVw==}
+  /@secretlint/secretlint-rule-sendgrid/5.3.0:
+    resolution: {integrity: sha512-HDqV/44KU+jYmybGK+BIo3VZglm99hBxrkVlPOK6styC8OPLDhl+VnTvucQJgYZWq1fKB7faaPyz5kUwLdL3iA==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/types': 5.2.4
+      '@secretlint/types': 5.3.0
       '@textlint/regexp-string-matcher': 2.0.2
     dev: true
 
-  /@secretlint/secretlint-rule-slack/5.2.4:
-    resolution: {integrity: sha512-Sy4fai5YL4IKyXv3dGxNApXaT3c9KO47miYFjtDrimsxJQL+XGm6O6WOgNCmeV7j686Gfj2qbBbc7sikFg2Wyg==}
+  /@secretlint/secretlint-rule-slack/5.3.0:
+    resolution: {integrity: sha512-TLH5veqm4z45RG7hhESJrI3Gq92JYITm0LXMIDfcM8nLG7sSgztElpOfCNPNr/6wAFqIqLldWe0FgKZxsAyICQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/types': 5.2.4
+      '@secretlint/types': 5.3.0
       '@textlint/regexp-string-matcher': 2.0.2
     dev: true
 
-  /@secretlint/source-creator/5.2.4:
-    resolution: {integrity: sha512-hyordYGr4QjLsel7wJiWS3dSepoVMvOtH6IC4qQKVuhpwMLABM2borzQDLurHCJ9xYBEisibv6JXyUbUIw4riA==}
+  /@secretlint/source-creator/5.3.0:
+    resolution: {integrity: sha512-Wp9u0mgidda1MJ6/sIg+gELUHo2edIhvQ/vIgaA2q+SJNQWKwMeVoJ71zM5TeZ5G0zUEyzXLsC4dzSaVGjJ52g==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
-      '@secretlint/types': 5.2.4
+      '@secretlint/types': 5.3.0
       istextorbinary: 6.0.0
     dev: true
 
-  /@secretlint/types/5.2.4:
-    resolution: {integrity: sha512-HevM03QnsnSkwYsAJRT81B+eKWGs0klss2SgwaSqYjL4cl7ORDPbfn8aAvl8GAFdFTi2NmWYW4pKI7cJHGGi7w==}
+  /@secretlint/types/5.3.0:
+    resolution: {integrity: sha512-IYugNzn0xUc95d1u+41AO9GBDVF/crGEC98oCZhqEFC56NzvZCA8m1ciYF+Mv2MmTExYphKBnuqgA9Z7L/WmgQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dev: true
 
@@ -1063,8 +1063,8 @@ packages:
       '@sinonjs/commons': 1.8.3
     dev: true
 
-  /@swc/core-android-arm-eabi/1.3.10:
-    resolution: {integrity: sha512-yeW0dvv7SSmb0Y1Hhr9+QceoDjn2uulcaY+LUZ9Zt2UBHl/95c7QVgjDaE2B/lSlTV5En/81/q58lXoT/IqjGw==}
+  /@swc/core-android-arm-eabi/1.3.11:
+    resolution: {integrity: sha512-LC9JlMcdFmTU94KKmQkJKaPSeVmYTfVm2rKGESMiFrgIjopXL/Zeg+XHA97ucnh5iUMkWIpXAMzSOaVRs33K5g==}
     engines: {node: '>=10'}
     cpu: [arm]
     os: [android]
@@ -1074,8 +1074,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-android-arm64/1.3.10:
-    resolution: {integrity: sha512-HXkUXP4Lm3Xc9qfd9J/6/YfxknWk0Esqmu6nFRikXDc691aXHDcDZ2D8SqPlhx2CZT1juuRajphOaUXMTaAP3g==}
+  /@swc/core-android-arm64/1.3.11:
+    resolution: {integrity: sha512-M7FamR3kFpVTyTw73FzKcOZmS7/TWHX75eqtwBTaU9fW4shf0KTLr/h9DnMxNKAnwUMeub/lqlINUe5EKFIKwQ==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [android]
@@ -1085,8 +1085,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-darwin-arm64/1.3.10:
-    resolution: {integrity: sha512-X1eM5LDk24W/pbGamwpMRGkQW1BC+1xYNzS38hiK5YCS20TDZwI5LIg2pTEecKl/SRt1WFMwAThUwKbp4m1HIA==}
+  /@swc/core-darwin-arm64/1.3.11:
+    resolution: {integrity: sha512-LOoiw3uQDuoKBLW3Mn8p6wIccpYjAoDI3ROdto4MksLQSraHMufXY8bqqncfVuy1750XZmC1qnU39RC3yihPfA==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [darwin]
@@ -1094,8 +1094,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-darwin-x64/1.3.10:
-    resolution: {integrity: sha512-wrsv6upfEzwCGHB7y7IsdrppyywNV7C5TZDXVYv3GCUQZAFlRBar+1yHMojuPxPvyjjfHtTEr68MOhUwq9ti3w==}
+  /@swc/core-darwin-x64/1.3.11:
+    resolution: {integrity: sha512-ycjrEbWmpU8MTDdVLdf76ClxQCSTfNqSoP59hieLzhmXpXUa7Oy4sN/v6WSQgp4I1euGs1Wp5kPU5hH5f7XBJQ==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [darwin]
@@ -1103,8 +1103,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-freebsd-x64/1.3.10:
-    resolution: {integrity: sha512-tJ+ncGIZcueU3RVuQtawLvU0zGza4YKH7aD9unaypFE6e0qx34EX7fzObAhTUi881muEFIU/mDKmVpFqdEi7QQ==}
+  /@swc/core-freebsd-x64/1.3.11:
+    resolution: {integrity: sha512-02uqYktPp6WmZfZ2Crc/yIVOcgANtjo8ciHcT7yLHvz7v+S7gx1I2tyNGUFtTX5hcR2IFNGrL8Yj4DvpTABFHg==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [freebsd]
@@ -1114,8 +1114,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-linux-arm-gnueabihf/1.3.10:
-    resolution: {integrity: sha512-4IsAIBk1zdzTINZR5+kPE170yyIQMY76R/yKxtHuzMYxhOaErxsObokttyZ9k9ImlZRujTzEn3A5SsZ/EvibUA==}
+  /@swc/core-linux-arm-gnueabihf/1.3.11:
+    resolution: {integrity: sha512-nZ2T/gPFncsIiFGhVeVY9vRCTX0hTdqso8OEvFhSwRfRvcEYOpb/rhMG09are7YoB44GMiku5tSzEiNmvT3GuQ==}
     engines: {node: '>=10'}
     cpu: [arm]
     os: [linux]
@@ -1125,8 +1125,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-linux-arm64-gnu/1.3.10:
-    resolution: {integrity: sha512-OaOd+wFbcTQwOD9Ce5luUp8qYoEvdX3s00Bby+j7hybu1fVZK4W40cqzVRp/EDElriG0I+tAdFvQW7PCcEzsPQ==}
+  /@swc/core-linux-arm64-gnu/1.3.11:
+    resolution: {integrity: sha512-EWEd8NnGwhykEDFIet/r4Fcfr6805ecnBniHZWmG8UVYUp5tz7LYEMZesxCxa0+aGVpCmxHL5/Cdk1uEIrVIzg==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
@@ -1134,8 +1134,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-linux-arm64-musl/1.3.10:
-    resolution: {integrity: sha512-AUzQ/5T2hoNIgZlnbflDufWDEfJbw+w8FwKoCp7kKyLLAXG8RHgTsx0TazzQ8PVcAQk8lWI2EBrObLL82n91kQ==}
+  /@swc/core-linux-arm64-musl/1.3.11:
+    resolution: {integrity: sha512-ms7CLj2+8sfTM2QnnwqDheYRky9rgPpX2hXmc0KltX+AiSAs7WURjn2JwXWkaICDzXL+djennfswxSspJ53knw==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
@@ -1143,8 +1143,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-linux-x64-gnu/1.3.10:
-    resolution: {integrity: sha512-rjAyQVRkHCWvCA0wyk0nhJdVMfown6wLvDztKZ0wyT6NDDFdvekTMgALQXL5MW4Q0MYBvGMSauoysTZCdZW9aA==}
+  /@swc/core-linux-x64-gnu/1.3.11:
+    resolution: {integrity: sha512-Fq5/QEY0IbzpIrqlvQT59aMf+nLk//esL3Aj4nvZdsvF4iZaD2oHtXW+/MBi0i1HV9OBWApGZMygYNVS0uVZkQ==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
@@ -1152,8 +1152,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-linux-x64-musl/1.3.10:
-    resolution: {integrity: sha512-X5KFbPTxcXaycGOrKoiPNCBUOjhCf8GpeNFpM7QASEWulWWM7nkMPrNeXKmQgJBlRT2j3iLine4Pkyc2bLPlVg==}
+  /@swc/core-linux-x64-musl/1.3.11:
+    resolution: {integrity: sha512-S/KoEgRHwGhs7VunHiz4jLrnFOJvqZe391j2MiYN1p2EThoGI3rvwcUoHkoxLCXVuDbi4E91qodOheaMGetWNA==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
@@ -1161,8 +1161,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-win32-arm64-msvc/1.3.10:
-    resolution: {integrity: sha512-KcQIERfwGyTAcJOnqGsFbRtU6wSm91xwYFVYjeYy2aNU/SKQ5rtwPTW1UAaUDdwDcS1Y49fNWWj+GPtdaZ+WXQ==}
+  /@swc/core-win32-arm64-msvc/1.3.11:
+    resolution: {integrity: sha512-fFby7KOQIxolR6w4Gie8MSkgQ3ee6j3r7A6PX4ekzu+509QsZogLPZnWFTJ8WFo7ui0tx/ocA5X8BV4ZNBVlKQ==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [win32]
@@ -1172,8 +1172,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-win32-ia32-msvc/1.3.10:
-    resolution: {integrity: sha512-bNpFGZX8tNkwWbQyFRSO+wJ9BgE38ItEodTUXmBsC1xhsHPYLYMlP+6lDKvkO7+jzRMLbyWWUyoWXCEfkvdYWw==}
+  /@swc/core-win32-ia32-msvc/1.3.11:
+    resolution: {integrity: sha512-fii7Y33S9Z5oZ/BTsXa8Ou/RZ4T/ZsAOFpG7mMvifpdAP6LVWdhLoNy7SeeEHTEAWGcWNA/FslA6p2WETvEEfA==}
     engines: {node: '>=10'}
     cpu: [ia32]
     os: [win32]
@@ -1183,8 +1183,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-win32-x64-msvc/1.3.10:
-    resolution: {integrity: sha512-40yeeov6XcJHm99anMeEn/NwhDcoM2fhBQHWRVZfCa43QC45AUjJ3kWrD76U6MPGnGy7MsCOXdFyu1mJOAHKEw==}
+  /@swc/core-win32-x64-msvc/1.3.11:
+    resolution: {integrity: sha512-cDF4qBQLf3U0KypnLn3T1HtE12QmEplPGjWs2Xd/hzVkjsPixVR8XIgLlczsj7Pk7Of7VDnUDLIl52aIdgTm8w==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [win32]
@@ -1192,35 +1192,35 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core/1.3.10:
-    resolution: {integrity: sha512-A5YjYFa45ThHOwftKqIQKNbukxJGTsdBQAqoTr+QD1/L6jbRg3xxhU5UDyVdUIULz40PH6YQiulyUVbyrjl1Iw==}
+  /@swc/core/1.3.11:
+    resolution: {integrity: sha512-lnCnnnNCsnbrhW/gwkoN0sAeIqOyoHLS4ZB20xmPJjKVfvTnJrAcNnLSiwlYdcoUSFqT2GYZjUAG6usEzRQASA==}
     engines: {node: '>=10'}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      '@swc/core-android-arm-eabi': 1.3.10
-      '@swc/core-android-arm64': 1.3.10
-      '@swc/core-darwin-arm64': 1.3.10
-      '@swc/core-darwin-x64': 1.3.10
-      '@swc/core-freebsd-x64': 1.3.10
-      '@swc/core-linux-arm-gnueabihf': 1.3.10
-      '@swc/core-linux-arm64-gnu': 1.3.10
-      '@swc/core-linux-arm64-musl': 1.3.10
-      '@swc/core-linux-x64-gnu': 1.3.10
-      '@swc/core-linux-x64-musl': 1.3.10
-      '@swc/core-win32-arm64-msvc': 1.3.10
-      '@swc/core-win32-ia32-msvc': 1.3.10
-      '@swc/core-win32-x64-msvc': 1.3.10
+      '@swc/core-android-arm-eabi': 1.3.11
+      '@swc/core-android-arm64': 1.3.11
+      '@swc/core-darwin-arm64': 1.3.11
+      '@swc/core-darwin-x64': 1.3.11
+      '@swc/core-freebsd-x64': 1.3.11
+      '@swc/core-linux-arm-gnueabihf': 1.3.11
+      '@swc/core-linux-arm64-gnu': 1.3.11
+      '@swc/core-linux-arm64-musl': 1.3.11
+      '@swc/core-linux-x64-gnu': 1.3.11
+      '@swc/core-linux-x64-musl': 1.3.11
+      '@swc/core-win32-arm64-msvc': 1.3.11
+      '@swc/core-win32-ia32-msvc': 1.3.11
+      '@swc/core-win32-x64-msvc': 1.3.11
     dev: true
 
-  /@swc/jest/0.2.23_@swc+core@1.3.10:
+  /@swc/jest/0.2.23_@swc+core@1.3.11:
     resolution: {integrity: sha512-ZLj17XjHbPtNsgqjm83qizENw05emLkKGu3WuPUttcy9hkngl0/kcc7fDbcSBpADS0GUtsO+iKPjZFWVAtJSlA==}
     engines: {npm: '>= 7.0.0'}
     peerDependencies:
       '@swc/core': '*'
     dependencies:
       '@jest/create-cache-key-function': 27.5.1
-      '@swc/core': 1.3.10
+      '@swc/core': 1.3.11
       jsonc-parser: 3.2.0
     dev: true
 
@@ -4488,15 +4488,15 @@ packages:
       is-regex: 1.1.4
     dev: true
 
-  /secretlint/5.2.4:
-    resolution: {integrity: sha512-ppP4fN7VrJVkE5sAfAhnsI0PrinPEyXx9Fa/qhRAC9yRxhKUBWnqalJXctWl2bPdc73+lwNqE5SB4G3duYEuHw==}
+  /secretlint/5.3.0:
+    resolution: {integrity: sha512-NAgrHYNpv8dqtyNuV8Kkmo3S1Il2XRPP0dWBVTLDBbGIwWQuKJQicJFxUpTitSsZ229wABBRvzR6IyX/HcK9CQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
-      '@secretlint/config-creator': 5.2.4
-      '@secretlint/formatter': 5.2.4
-      '@secretlint/node': 5.2.4
-      '@secretlint/profiler': 5.2.4
+      '@secretlint/config-creator': 5.3.0
+      '@secretlint/formatter': 5.3.0
+      '@secretlint/node': 5.3.0
+      '@secretlint/profiler': 5.3.0
       debug: 4.3.4
       globby: 11.1.0
       meow: 9.0.0
@@ -4871,7 +4871,7 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tsup/6.3.0_bp7b565h4vmear4gmv5hsz6kte:
+  /tsup/6.3.0_shqznlriov6afx6xf3bowxn3ra:
     resolution: {integrity: sha512-IaNQO/o1rFgadLhNonVKNCT2cks+vvnWX3DnL8sB87lBDqRvJXHENr5lSPJlqwplUlDxSwZK8dSg87rgBu6Emw==}
     engines: {node: '>=14'}
     hasBin: true
@@ -4887,7 +4887,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@swc/core': 1.3.10
+      '@swc/core': 1.3.11
       bundle-require: 3.1.0_esbuild@0.15.10
       cac: 6.7.14
       chokidar: 3.5.3
