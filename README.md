@@ -4,26 +4,27 @@ A template project for javascript library (for browsers or Node.js) and/or execu
 
 ## npm scripts
 
-### `npm run lint`
+### `pnpm lint`
 
 - Static analysis of code with [ESLint](https://eslint.org/)
 - Code format checking with [Prettier](https://prettier.io)
 - Type checking of TypeScript with [tsc](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+- Credential checking with [secretlint](https://github.com/secretlint/secretlint)
 
-### `npm run fix`
+### `pnpm fix`
 
 (if modifiable) Code fixes by ESLint and Prettier
 
-### `npm run build`
+### `pnpm build`
 
 - Build library entry points for both ESM and CJS by [tsup](https://tsup.egoist.sh/)
 - Build an executable that runs in ESM mode by tsup
 
-### `npm run watch`
+### `pnpm watch`
 
 Watching mode of `build`
 
-### `npm test`
+### `pnpm test`
 
 Testing by [Jest](https://jestjs.io/)
 
