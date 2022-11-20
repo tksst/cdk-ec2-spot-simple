@@ -11,4 +11,4 @@ on:
 
 jobs:
   actionlint:
-    uses: tksst/github-actions-workflows/.github/workflows/actionlint.yml@771c92326a8f6c6b1e75cc41fca91ad0202629d9
+    uses: tksst/github-actions-workflows/.github/workflows/actionlint.yml@60c5a837e7d460d37847306dd77c8df8ab7d06c6
