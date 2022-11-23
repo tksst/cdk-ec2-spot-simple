@@ -33,7 +33,7 @@
     "fix:prettier": "pnpm lint:prettier --write",
     "fix:eslint": "pnpm lint:eslint --fix",
     "lint": "run-p --continue-on-error --print-label lint:*",
-    "lint:prettier": "prettier --check .",
+    "lint:prettier": "prettier --cache --check .",
     "lint:eslint": "eslint --color --cache --cache-strategy content --cache-location ./node_modules/.cache/eslint/ --ext .js,.cjs,.mjs,.ts,.cts,.mts .",
     "lint:secretlint": "secretlint --maskSecrets **",
     "lint:tsc": "tsc --noEmit",
