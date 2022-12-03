@@ -8,9 +8,13 @@
 *.test.mjs.map
 *.test.cjs
 *.test.cjs.map
+*.test.ts
+*.test.mts
+*.test.cts
 *.test.d.ts
 *.test.d.ts.map
 *.test.d.mts
 *.test.d.mts.map
 *.test.d.cts
 *.test.d.cts.map
+**/__snapshots__/**
