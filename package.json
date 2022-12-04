@@ -1,7 +1,9 @@
 {
-  "name": "typescript-starter-template",
-  "version": "0.0.0-development",
-  "private": true,
+  "name": "cdk-ec2-spot",
+  "version": "0.0.4-development",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "",
   "homepage": "https://github.com/tksst/typescript-starter-template",
   "repository": "github:tksst/typescript-starter-template",
