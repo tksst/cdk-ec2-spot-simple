@@ -1,10 +1,10 @@
 {
-  "name": "typescript-starter-template",
+  "name": "your-package-name-here",
   "version": "0.0.0-development",
   "private": true,
-  "description": "",
-  "homepage": "https://github.com/tksst/typescript-starter-template",
-  "repository": "github:tksst/typescript-starter-template",
+  "description": "description",
+  "homepage": "https://example.example/your-website",
+  "repository": "github:tksst/repository-name",
   "license": "CC0-1.0",
   "author": {
     "name": "Takashi Sato",
