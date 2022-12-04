@@ -17,18 +17,15 @@
     "require": "./dist/lib/index.cjs"
   },
   "types": "./dist/lib/index.d.ts",
-  "bin": {
-    "typescript-node-starter": "./dist/bin/index.js"
-  },
   "scripts": {
     "clean": "tss-rmrf ./dist/",
     "build": "run-s --continue-on-error clean build:*",
     "build:lib": "tsup --config ./tsup.config.lib.js",
-    "build:bin": "tsup --config ./tsup.config.bin.js",
+    "build:lambda": "tsup --config ./tsup.config.lambda.js",
     "prepack": "pnpm build",
     "watch": "npm-run-all clean --parallel --continue-on-error --print-label watch:*",
     "watch:lib": "pnpm build:lib --watch",
-    "watch:bin": "pnpm build:bin --watch",
+    "watch:lambda": "pnpm build:lambda --watch",
     "fix": "run-s --continue-on-error fix:*",
     "fix:prettier": "pnpm lint:prettier --write",
     "fix:eslint": "pnpm lint:eslint --fix",
