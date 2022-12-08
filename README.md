@@ -17,7 +17,7 @@ import { SpotInstance } from "cdk-ec2-spot"
 import * as ec2 from "aws-cdk-lib/ec2"
 
 // Simple usage
-new SpotInstance(this, "StoppableSpotInstance", {
+new SpotInstance(this, "DefaultConfigSpotInstance", {
     // Required properties of "ec2.Instance"
     vpc: ec2.Vpc.fromLookup(this, "defaultVPC", { isDefault: true });,
     instanceType: ec2.InstanceType.of(ec2.InstanceClass.T3A, ec2.InstanceSize.NANO),
