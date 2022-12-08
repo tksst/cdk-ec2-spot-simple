@@ -1,10 +1,12 @@
 {
-  "name": "your-package-name-here",
-  "version": "0.0.0-development",
-  "private": true,
-  "description": "description",
-  "homepage": "https://example.example/your-website",
-  "repository": "github:tksst/repository-name",
+  "name": "cdk-ec2-spot",
+  "version": "0.0.0-alpha",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "",
+  "homepage": "https://github.com/tksst/cdk-ec2-spot/",
+  "repository": "github:tksst/cdk-ec2-spot",
   "license": "CC0-1.0",
   "author": {
     "name": "Takashi Sato",
