@@ -48,9 +48,12 @@
     "@tksst/prettier-config": "1.1.0",
     "@tksst/typescript-starter-configs": "1.0.0",
     "@types/jest": "29.2.4",
+    "@types/node": "14.18.34",
     "@typescript-eslint/eslint-plugin": "5.46.0",
     "@typescript-eslint/parser": "5.46.0",
+    "aws-cdk-lib": "2.24.0",
     "better-typescript-lib": "2.2.0",
+    "constructs": "10.0.9",
     "eslint": "8.29.0",
     "eslint-plugin-jest": "27.1.6",
     "eslint-plugin-simple-import-sort": "8.0.0",
@@ -63,6 +66,10 @@
   },
   "dependencies": {
     "source-map-support": "0.5.21"
+  },
+  "peerDependencies": {
+    "aws-cdk-lib": "^2.24.0",
+    "constructs": "^10.0.9"
   },
   "packageManager": "pnpm@7.18.1",
   "engines": {
