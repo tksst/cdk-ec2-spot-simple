@@ -1,4 +1,7 @@
 {
   "extends": "@tksst/typescript-starter-configs/tsconfig.json",
+  "compilerOptions": {
+    "exactOptionalPropertyTypes": false
+  },
   "include": ["src"]
 }
