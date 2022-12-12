@@ -5,10 +5,9 @@ on:
   workflow_dispatch:
   pull_request:
   push:
-    # branches:
-    # branches-ignore:
-    #  - master
-    #  - alpha
+    branches-ignore:
+      - master
+      - alpha
 
 jobs:
   build-test:
