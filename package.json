@@ -1,12 +1,12 @@
 {
-  "name": "cdk-ec2-spot",
+  "name": "cdk-ec2-spot-simple",
   "version": "0.0.0-alpha",
   "publishConfig": {
     "access": "public"
   },
   "description": "",
-  "homepage": "https://github.com/tksst/cdk-ec2-spot/",
-  "repository": "github:tksst/cdk-ec2-spot",
+  "homepage": "https://github.com/tksst/cdk-ec2-spot-simple/",
+  "repository": "github:tksst/cdk-ec2-spot-simple",
   "license": "CC0-1.0",
   "author": {
     "name": "Takashi Sato",
