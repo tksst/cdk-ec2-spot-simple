@@ -13,8 +13,15 @@ import { Construct } from "constructs";
 const defaultRuntime = Runtime.NODEJS_16_X;
 const defaultLogRetention = RetentionDays.THREE_MONTHS;
 
-const filename = fileURLToPath(import.meta.url);
-const dirname = path.dirname(filename);
+const dirname = (() => {
+    try {
+        // cjs
+        return __dirname;
+    } catch (e) {
+        // When we are in ESM, __dirname throws ReferenceError
+        return path.dirname(fileURLToPath(import.meta.url));
+    }
+})();
 
 interface SpotReqCancelerProps {
     /**
