@@ -22,4 +22,7 @@ module.exports = {
         ecmaVersion: "latest",
     },
     extends: "@tksst",
+    rules: {
+        "no-new": "off",
+    },
 };

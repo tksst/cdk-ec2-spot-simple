@@ -5,5 +5,7 @@ import { defineConfig } from "tsup";
 
 export default defineConfig({
     ...binOptions,
-    entry: ["src/bin/index.ts"],
+    outDir: "dist/lib/lambda/",
+    format: ["cjs"],
+    entry: ["src/lib/lambda/index.ts"],
 });

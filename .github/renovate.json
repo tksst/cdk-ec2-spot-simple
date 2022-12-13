@@ -1,4 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>tksst/renovate-config"]
+  "extends": ["github>tksst/renovate-config"],
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["constructs", "aws-cdk-lib"],
+      "enabled": false
+    }
+  ]
 }
