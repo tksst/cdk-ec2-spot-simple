@@ -48,7 +48,7 @@
     "@swc/jest": "0.2.24",
     "@tksst/eslint-config": "4.2.0",
     "@tksst/prettier-config": "1.1.0",
-    "@tksst/typescript-starter-configs": "1.0.0",
+    "@tksst/typescript-starter-configs": "2.0.0",
     "@types/aws-lambda": "8.10.109",
     "@types/jest": "29.2.4",
     "@types/node": "14.18.34",
