@@ -12,4 +12,4 @@ on:
 jobs:
   build-test:
     name: Build, Lint and Test
-    uses: tksst/github-actions-workflows/.github/workflows/nodejs-pnpm.yml@14553fc8b894ed94edaea724ca6b11f13312e850
+    uses: tksst/github-actions-workflows/.github/workflows/nodejs-pnpm.yml@dad9814cc9c69d48020962b0e2aaa89e4b48f796
