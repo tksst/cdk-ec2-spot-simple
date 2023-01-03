@@ -6,9 +6,9 @@ const pluginsRelease = [
     "@semantic-release/changelog",
     ["@semantic-release/npm", { npmPublish: false }],
     "@semantic-release/github",
-    // jsii-pacmak reads our version from package.json, so semantic-release should update package.json.
     "@semantic-release/git",
-    ["@semantic-release/exec", { publishCmd: "pnpm exec publib dist-jsii" }],
+    // eslint-disable-next-line no-template-curly-in-string
+    ["@semantic-release/exec", { publishCmd: "./scripts/release.sh ${nextRelease.version}" }],
 ];
 
 // CHANGELOG.md should not be updated on pre-release because it will conflict with a future release.
