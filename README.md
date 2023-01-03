@@ -4,8 +4,37 @@ CDK construct library to create EC2 Spot Instances simply.
 
 ## Install
 
+### TypeScript/JavaScript
+
 ```shell
-$ npm install cdk-ec2-spot-simple
+npm install cdk-ec2-spot-simple
+```
+
+### Python
+
+```shell
+pip install cdk-ec2-spot-simple
+```
+
+### .NET
+
+```shell
+dotnet add package TksSt.Cdk.Ec2SpotSimple
+```
+
+### Java
+
+```xml
+<dependency>
+    <groupId>st.tks.cdk</groupId>
+    <artifactId>ec2-spot-simple</artifactId>
+</dependency>
+```
+
+### Go
+
+```shell
+go get github.com/tksst/cdk-ec2-spot-simple-go/cdkec2spotsimple
 ```
 
 ## Usage

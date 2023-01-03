@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "outDir": "dist/",
+    "rootDir": "src/",
+    "declarationMap": true,
+    "types": ["node", "jest"],
+    "alwaysStrict": true,
+    "charset": "utf8",
+    "declaration": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+    "lib": ["es2020"],
+    "module": "CommonJS",
+    "newLine": "lf",
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "stripInternal": false,
+    "target": "ES2020",
+    "composite": false,
+    "tsBuildInfoFile": "dist/lib/tsconfig.tsbuildinfo"
+  },
+  "include": ["src/"]
+}
