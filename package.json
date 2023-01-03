@@ -4,7 +4,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "",
+  "description": "CDK construct library to create EC2 Spot Instances simply.",
+  "keywords": [
+    "awscdk",
+    "aws",
+    "ec2"
+  ],
   "homepage": "https://github.com/tksst/cdk-ec2-spot-simple/",
   "repository": "github:tksst/cdk-ec2-spot-simple",
   "license": "Apache-2.0",
