@@ -4,17 +4,15 @@ const pluginsRelease = [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
-    "@semantic-release/npm",
+    ["@semantic-release/npm", { npmPublish: false }],
     "@semantic-release/github",
+    // jsii-pacmak reads our version from package.json, so semantic-release should update package.json.
     "@semantic-release/git",
+    ["@semantic-release/exec", { publishCmd: "pnpm exec publib dist-jsii" }],
 ];
 
-const plubinsPreRelease = [
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
-    "@semantic-release/npm",
-    "@semantic-release/github",
-];
+// CHANGELOG.md should not be updated on pre-release because it will conflict with a future release.
+const plubinsPreRelease = pluginsRelease.filter((it) => it !== "@semantic-release/changelog");
 
 const config = {
     branches: ["master", { name: "alpha", prerelease: true }],

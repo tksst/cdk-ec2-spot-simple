@@ -18,3 +18,11 @@
 *.test.d.cts
 *.test.d.cts.map
 **/__snapshots__/**
+
+
+# Exclude jsii outdir
+dist-jsii
+
+# Include .jsii and .jsii.gz
+!.jsii
+!.jsii.gz
