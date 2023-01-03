@@ -97,7 +97,7 @@ class SpotReqCanceler extends Construct {
             memorySize: 128,
             role: lambdaExcecutionRole,
             logRetention,
-            code: Code.fromAsset(path.join(dirname, "lambda")),
+            code: Code.fromAsset(path.join(dirname, "..", "lambda")),
             handler: "index.handler",
         });
 
