@@ -4,16 +4,18 @@ const pluginsRelease = [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
-    "@semantic-release/npm",
+    ["@semantic-release/npm", { npmPublish: false }],
     "@semantic-release/github",
     "@semantic-release/git",
+    ["@semantic-release/exec", { publishCmd: "pnpm exec publib dist-jsii" }],
 ];
 
 const plubinsPreRelease = [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@semantic-release/npm",
+    ["@semantic-release/npm", { npmPublish: false }],
     "@semantic-release/github",
+    ["@semantic-release/exec", { publishCmd: "pnpm exec publib dist-jsii" }],
 ];
 
 const config = {

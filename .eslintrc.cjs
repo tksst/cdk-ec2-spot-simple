@@ -13,6 +13,7 @@ module.exports = {
         jest: true,
     },
     parserOptions: {
+        project: "./tsconfig.lint-and-lambda.json",
         // Your project environment settings here.
         // See ESLint document of "Specifying Parser Options":
         // https://eslint.org/docs/latest/user-guide/configuring/language-options#specifying-parser-options

@@ -1,4 +1,4 @@
-name: Build, Test and Release
+name: Release
 on:
   push:
     branches:
@@ -6,12 +6,12 @@ on:
       - alpha
 
 jobs:
-  build-test:
+  build-test-package:
     uses: ./.github/workflows/build-test.yml
 
   release:
-    needs: build-test
-    runs-on: ubuntu-latest
+    needs: build-test-package
+    runs-on: ubuntu-22.04
 
     steps:
       - uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b # v3.2.0
@@ -30,10 +30,32 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - run: pnpm build
+      - name: Download the artifact
+        uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7 # v3.0.1
+        with:
+          name: dist-jsii
+          path: dist-jsii
 
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # @semantic-release/github and Go publish
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          # NPM
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # Java
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+          MAVEN_GPG_PRIVATE_KEY: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
+          MAVEN_GPG_PRIVATE_KEY_PASSPHRASE: ${{ secrets.MAVEN_GPG_PRIVATE_KEY_PASSPHRASE }}
+          MAVEN_STAGING_PROFILE_ID: ${{ secrets.MAVEN_STAGING_PROFILE_ID }}
+          MAVEN_ENDPOINT: ${{ secrets.MAVEN_ENDPOINT }}
+          # Python
+          TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
+          TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
+          # Go
+          GIT_USER_NAME: github-actions[bot]
+          GIT_USER_EMAIL: github-actions[bot]@users.noreply.github.com
+          # dotnet
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+
         run: pnpm exec semantic-release

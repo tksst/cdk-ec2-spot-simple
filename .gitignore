@@ -1,3 +1,6 @@
 /coverage/
 /dist/
+/dist-jsii/
 /node_modules/
+/tsconfig.json
+/.jsii
