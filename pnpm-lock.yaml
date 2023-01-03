@@ -4,6 +4,7 @@ specifiers:
   '@aws-sdk/client-ec2': 3.241.0
   '@secretlint/secretlint-rule-preset-recommend': 6.0.1
   '@semantic-release/changelog': 6.0.2
+  '@semantic-release/exec': 6.0.3
   '@semantic-release/git': 10.0.1
   '@swc/core': 1.3.24
   '@swc/jest': 0.2.24
@@ -27,6 +28,7 @@ specifiers:
   jsii-pacmak: 1.72.0
   npm-run-all: 4.1.5
   prettier: 2.8.1
+  publib: 0.2.558
   secretlint: 6.0.1
   semantic-release: 19.0.5
   source-map-support: 0.5.21
@@ -36,6 +38,7 @@ devDependencies:
   '@aws-sdk/client-ec2': 3.241.0
   '@secretlint/secretlint-rule-preset-recommend': 6.0.1
   '@semantic-release/changelog': 6.0.2_semantic-release@19.0.5
+  '@semantic-release/exec': 6.0.3_semantic-release@19.0.5
   '@semantic-release/git': 10.0.1_semantic-release@19.0.5
   '@swc/core': 1.3.24
   '@swc/jest': 0.2.24_@swc+core@1.3.24
@@ -59,6 +62,7 @@ devDependencies:
   jsii-pacmak: 1.72.0
   npm-run-all: 4.1.5
   prettier: 2.8.1
+  publib: 0.2.558
   secretlint: 6.0.1
   semantic-release: 19.0.5
   source-map-support: 0.5.21
@@ -2166,6 +2170,23 @@ packages:
     engines: {node: '>=14.17'}
     dev: true
 
+  /@semantic-release/exec/6.0.3_semantic-release@19.0.5:
+    resolution: {integrity: sha512-bxAq8vLOw76aV89vxxICecEa8jfaWwYITw6X74zzlO0mc/Bgieqx9kBRz9z96pHectiTAtsCwsQcUyLYWnp3VQ==}
+    engines: {node: '>=14.17'}
+    peerDependencies:
+      semantic-release: '>=18.0.0'
+    dependencies:
+      '@semantic-release/error': 3.0.0
+      aggregate-error: 3.1.0
+      debug: 4.3.4
+      execa: 5.1.1
+      lodash: 4.17.21
+      parse-json: 5.2.0
+      semantic-release: 19.0.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@semantic-release/git/10.0.1_semantic-release@19.0.5:
     resolution: {integrity: sha512-eWrx5KguUcU2wUPaO6sfvZI0wPafUKAMNC18aXY4EnNcrZL86dEmpNVnC9uMpGZkmZJ9EfCVJBQx4pV4EMGT1w==}
     engines: {node: '>=14.17'}
@@ -2517,6 +2538,12 @@ packages:
     resolution: {integrity: sha512-1kbcJ40lLB7MHsj39U4Sh1uTd2E7rLEa79kmDpI6cy+XiXsteB3POdQomoq4FxszMrO3ZYchkhYJw7A2862b3w==}
     dependencies:
       '@babel/types': 7.20.5
+    dev: true
+
+  /@types/fs-extra/8.1.2:
+    resolution: {integrity: sha512-SvSrYXfWSc7R4eqnOzbQF4TZmfpNSM9FrSWLU3EUnWBuyZqNBOrv1B1JA3byUDPUl9z4Ab3jeZG2eDdySlgNMg==}
+    dependencies:
+      '@types/node': 18.11.9
     dev: true
 
   /@types/graceful-fs/4.1.5:
@@ -6043,6 +6070,15 @@ packages:
       sisteransi: 1.0.5
     dev: true
 
+  /publib/0.2.558:
+    resolution: {integrity: sha512-N/RDURo6pl3l6u5bdDUVMxDgi5fDwat5S6cXd05yeuGay7KTUc8DboFZ6eQ4dhs1AGLS2Qr7orWOxQsLABDOnw==}
+    hasBin: true
+    dependencies:
+      '@types/fs-extra': 8.1.2
+      fs-extra: 8.1.0
+      shlex: 2.1.2
+    dev: true
+
   /punycode/2.1.1:
     resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
     engines: {node: '>=6'}
@@ -6376,6 +6412,10 @@ packages:
 
   /shell-quote/1.7.4:
     resolution: {integrity: sha512-8o/QEhSSRb1a5i7TFR0iM4G16Z0vYB2OQVs4G3aAFXjn3T6yEx8AZxy1PgDF7I00LZHYA3WxaSYIf5e5sAX8Rw==}
+    dev: true
+
+  /shlex/2.1.2:
+    resolution: {integrity: sha512-Nz6gtibMVgYeMEhUjp2KuwAgqaJA1K155dU/HuDaEJUGgnmYfVtVZah+uerVWdH8UGnyahhDCgABbYTbs254+w==}
     dev: true
 
   /side-channel/1.0.4:
