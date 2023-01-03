@@ -8,6 +8,8 @@ on:
 jobs:
   build-test-package:
     uses: ./.github/workflows/build-test.yml
+    with:
+      force: true
 
   release:
     needs: build-test-package

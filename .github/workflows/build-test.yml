@@ -2,7 +2,19 @@ name: Build and Test
 
 on:
   workflow_call:
+    inputs:
+      force:
+        description: run the workflow even if it is skippable
+        default: false
+        required: false
+        type: boolean
   workflow_dispatch:
+    inputs:
+      force:
+        description: run the workflow even if it is skippable
+        default: false
+        required: false
+        type: boolean
   pull_request:
   push:
     branches-ignore:
@@ -16,6 +28,7 @@ jobs:
     with:
       job-title: Build, Lint and Test
       os: '[ "ubuntu-22.04", "windows-latest" ]'
+      force: ${{ inputs.force == true }}
 
   package:
     name: Package
@@ -27,3 +40,4 @@ jobs:
       node-versions: '[ "18" ]'
       artifact-path: dist-jsii
       artifact-name: dist-jsii
+      force: ${{ inputs.force == true}}
