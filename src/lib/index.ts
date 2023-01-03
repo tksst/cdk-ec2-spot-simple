@@ -23,33 +23,33 @@ const dirname = (() => {
     }
 })();
 
-interface SpotReqCancelerProps {
+export interface SpotReqCancelerProps {
     /**
      * Log retention period for internal Lambda functions logs kept in CloudWatch Logs.
      * @default - Three months
      */
-    lambdaLogRetention?: RetentionDays;
+    readonly lambdaLogRetention?: RetentionDays;
     /**
      * Internal Lambda functions execution role.
      * @default - Create a new Role that can do ec2:DescribeInstances and ec2:CancelSpotInstanceRequests and has "service-role/AWSLambdaBasicExecutionRole"
      */
-    lambdaExcecutionRole?: iam.IRole;
+    readonly lambdaExcecutionRole?: iam.IRole;
     /**
      * Runtime environment for the internal Lambda function.
      * If anything other than Node.js is specified, an error will occur.
      * @default - Node.js 16
      */
-    lambdaRuntime?: Runtime;
+    readonly lambdaRuntime?: Runtime;
 }
 
 export interface SpotInstanceProps extends InstanceProps {
-    spotReqCancelerOptions?: SpotReqCancelerProps;
+    readonly spotReqCancelerOptions?: SpotReqCancelerProps;
 
     /**
      * The options for the Spot instances.
      * @default - Use the Launch Template's default InstanceMarketOptions.
      */
-    spotOptions?: LaunchTemplateSpotOptions;
+    readonly spotOptions?: LaunchTemplateSpotOptions;
 }
 
 class SpotReqCanceler extends Construct {
