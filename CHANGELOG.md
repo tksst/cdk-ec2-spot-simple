@@ -1,3 +1,16 @@
+# [2.0.0](https://github.com/tksst/cdk-ec2-spot-simple/compare/v1.0.0...v2.0.0) (2023-01-03)
+
+
+### Features
+
+* cdk-ec2-spot-simple is now a JSII module and provides libraries for other languages than TypeScript. ([ed38f81](https://github.com/tksst/cdk-ec2-spot-simple/commit/ed38f812dfa060c5462f4adf748ff08d2e3c1378))
+* Each property of SpotInstanceProps and SpotReqCancelerProps is now read only. ([f912bf7](https://github.com/tksst/cdk-ec2-spot-simple/commit/f912bf7f7365a1482a60f39cb0576d46b217f5d6))
+
+
+### BREAKING CHANGES
+
+* Each property of SpotInstanceProps and SpotReqCancelerProps is now read only.
+
 # 1.0.0 (2022-12-13)
 
 
