@@ -34,7 +34,7 @@ dotnet add package TksSt.Cdk.Ec2SpotSimple
 ### Go
 
 ```shell
-go get github.com/tksst/cdk-ec2-spot-simple-go/cdkec2spotsimple
+go get github.com/tksst/cdk-ec2-spot-simple-go/cdkec2spotsimple/v2
 ```
 
 ## Usage
