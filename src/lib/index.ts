@@ -1,11 +1,11 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import * as path from "node:path";
 
 import { CustomResource, Stack } from "aws-cdk-lib";
 import type { InstanceProps, LaunchTemplateSpotOptions } from "aws-cdk-lib/aws-ec2";
 import { Instance, LaunchTemplate, SpotRequestType } from "aws-cdk-lib/aws-ec2";
 import * as iam from "aws-cdk-lib/aws-iam";
-import { Architecture, Code, Function, Runtime, RuntimeFamily } from "aws-cdk-lib/aws-lambda";
+import { Architecture, Runtime, RuntimeFamily } from "aws-cdk-lib/aws-lambda";
+import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
 import { RetentionDays } from "aws-cdk-lib/aws-logs";
 import { Provider } from "aws-cdk-lib/custom-resources";
 import { Construct } from "constructs";
@@ -13,16 +13,9 @@ import { Construct } from "constructs";
 const defaultRuntime = Runtime.NODEJS_16_X;
 const defaultLogRetention = RetentionDays.THREE_MONTHS;
 
-const dirname = (() => {
-    try {
-        // cjs
-        return __dirname;
-    } catch (e) {
-        // When we are in ESM, __dirname throws ReferenceError
-        return path.dirname(fileURLToPath(import.meta.url));
-    }
-})();
-
+/**
+ * Options related to Lambda functions to cancel spot requests.
+ */
 export interface SpotReqCancelerProps {
     /**
      * Log retention period for internal Lambda functions logs kept in CloudWatch Logs.
@@ -42,7 +35,13 @@ export interface SpotReqCancelerProps {
     readonly lambdaRuntime?: Runtime;
 }
 
+/**
+ * Properties of `SpotInstance`
+ */
 export interface SpotInstanceProps extends InstanceProps {
+    /**
+     * Options related to Lambda functions to cancel spot requests.
+     */
     readonly spotReqCancelerOptions?: SpotReqCancelerProps;
 
     /**
@@ -91,14 +90,16 @@ class SpotReqCanceler extends Construct {
             throw new Error("A runtime other than Node.js was specified.");
         }
 
-        const handler = new Function(this, "Handler", {
+        const handler = new NodejsFunction(this, "Handler", {
+            entry: path.join(__dirname, "../../src/lambda/index.ts"),
             runtime,
             architecture: Architecture.ARM_64,
             memorySize: 128,
             role: lambdaExcecutionRole,
             logRetention,
-            code: Code.fromAsset(path.join(dirname, "..", "lambda")),
-            handler: "index.handler",
+            bundling: {
+                tsconfig: "tsconfig.lint-and-lambda.json",
+            },
         });
 
         const provider = new Provider(this, "Provider", {
@@ -115,6 +116,9 @@ class SpotReqCanceler extends Construct {
     }
 }
 
+/**
+ * This represents a single EC2 Spot instance and other necessary resources.
+ */
 export class SpotInstance extends Instance {
     public constructor(scope: Construct, id: string, props: SpotInstanceProps) {
         super(scope, id, props);
