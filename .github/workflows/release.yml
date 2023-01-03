@@ -8,8 +8,6 @@ on:
 jobs:
   build-test-package:
     uses: ./.github/workflows/build-test.yml
-    with:
-      force: true
 
   release:
     needs: build-test-package
@@ -31,12 +29,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
-      - name: Download the artifact
-        uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7 # v3.0.1
-        with:
-          name: dist-jsii
-          path: dist-jsii
 
       - name: Release
         env:

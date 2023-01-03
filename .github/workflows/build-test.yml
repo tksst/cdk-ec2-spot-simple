@@ -2,12 +2,6 @@ name: Build and Test
 
 on:
   workflow_call:
-    inputs:
-      force:
-        description: run the workflow even if it is skippable
-        default: false
-        required: false
-        type: boolean
   workflow_dispatch:
     inputs:
       force:
@@ -38,6 +32,4 @@ jobs:
       pnpm-commands: '[ "package" ]'
       os: '[ "ubuntu-22.04" ]'
       node-versions: '[ "18" ]'
-      artifact-path: dist-jsii
-      artifact-name: dist-jsii
       force: ${{ inputs.force == true}}
