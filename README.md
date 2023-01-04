@@ -1,5 +1,11 @@
 # cdk-ec2-spot-simple
 
+[![npm](https://img.shields.io/npm/v/cdk-ec2-spot-simple)](https://www.npmjs.com/package/cdk-ec2-spot-simple)
+[![PyPI](https://img.shields.io/pypi/v/cdk-ec2-spot-simple)](https://pypi.org/project/cdk-ec2-spot-simple)
+[![Nuget](https://img.shields.io/nuget/v/TksSt.Cdk.Ec2SpotSimple)](https://www.nuget.org/packages/TksSt.Cdk.Ec2SpotSimple)
+[![Maven Central](https://img.shields.io/maven-central/v/st.tks.cdk/ec2-spot-simple)](https://search.maven.org/artifact/st.tks.cdk/ec2-spot-simple)  
+[![View on Construct Hub](https://constructs.dev/badge?package=cdk-ec2-spot-simple)](https://constructs.dev/packages/cdk-ec2-spot-simple)
+
 CDK construct library to create EC2 Spot Instances simply.
 
 ## Install
@@ -68,6 +74,10 @@ new SpotInstance(this, "StoppableSpotInstance", {
 });
 
 ```
+
+## API document
+
+[See Construct Hub](https://constructs.dev/packages/cdk-ec2-spot-simple)
 
 ## Background
 
