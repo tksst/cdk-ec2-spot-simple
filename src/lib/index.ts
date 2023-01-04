@@ -4,8 +4,7 @@ import { CustomResource, Stack } from "aws-cdk-lib";
 import type { InstanceProps, LaunchTemplateSpotOptions } from "aws-cdk-lib/aws-ec2";
 import { Instance, LaunchTemplate, SpotRequestType } from "aws-cdk-lib/aws-ec2";
 import * as iam from "aws-cdk-lib/aws-iam";
-import { Architecture, Runtime, RuntimeFamily } from "aws-cdk-lib/aws-lambda";
-import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
+import { Architecture, Code, Function, Runtime, RuntimeFamily } from "aws-cdk-lib/aws-lambda";
 import { RetentionDays } from "aws-cdk-lib/aws-logs";
 import { Provider } from "aws-cdk-lib/custom-resources";
 import { Construct } from "constructs";
@@ -90,16 +89,14 @@ class SpotReqCanceler extends Construct {
             throw new Error("A runtime other than Node.js was specified.");
         }
 
-        const handler = new NodejsFunction(this, "Handler", {
-            entry: path.join(__dirname, "../../src/lambda/index.ts"),
+        const handler = new Function(this, "Handler", {
             runtime,
             architecture: Architecture.ARM_64,
             memorySize: 128,
             role: lambdaExcecutionRole,
             logRetention,
-            bundling: {
-                tsconfig: "tsconfig.lint-and-lambda.json",
-            },
+            code: Code.fromAsset(path.join(__dirname, "../../dist/lambda")),
+            handler: "index.handler",
         });
 
         const provider = new Provider(this, "Provider", {
