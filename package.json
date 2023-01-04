@@ -22,8 +22,11 @@
   "types": "./dist/lib/index.d.ts",
   "scripts": {
     "clean": "tss-rmrf ./dist/ ./dist-jsii/",
-    "build": "jsii",
-    "package": "jsii-pacmak",
+    "build": "run-p --continue-on-error --print-label build:*",
+    "build:jsii": "jsii",
+    "build:lambda": "esbuild ./src/lambda/index.ts --bundle --sourcemap --target=node16 --platform=node --tsconfig=tsconfig.lint-and-lambda.json --minify-syntax --minify-whitespace --outfile=dist/lambda/index.js",
+    "package": "run-s clean build:lambda package:jsii",
+    "package:jsii": "jsii-pacmak",
     "prepack": "pnpm build",
     "watch": "jsii --watch",
     "fix": "run-s --continue-on-error fix:*",
@@ -34,7 +37,7 @@
     "lint:eslint": "eslint --color --cache --cache-strategy content --cache-location ./node_modules/.cache/eslint/ --ext .js,.cjs,.mjs,.ts,.cts,.mts .",
     "lint:secretlint": "secretlint --maskSecrets **",
     "lint:tsc": "tsc --noEmit -p ./tsconfig.lint-and-lambda.json",
-    "test": "run-s test:*",
+    "test": "run-s build:lambda test:*",
     "test:unit": "jest --ci"
   },
   "devDependencies": {
