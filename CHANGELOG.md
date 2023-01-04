@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/tksst/cdk-ec2-spot-simple/compare/v2.0.1...v2.0.2) (2023-01-04)
+
+
+### Bug Fixes
+
+* "cdk synth" error if requestyType is `SpotRequestType.PERSISTENT` ([c871d69](https://github.com/tksst/cdk-ec2-spot-simple/commit/c871d69bffa3ad0af48f9f400ac38f1c1b8abb71))
+
 ## [2.0.1](https://github.com/tksst/cdk-ec2-spot-simple/compare/v2.0.0...v2.0.1) (2023-01-03)
 
 
