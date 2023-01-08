@@ -6,6 +6,11 @@
       "matchManagers": ["npm"],
       "matchPackageNames": ["constructs", "aws-cdk-lib"],
       "enabled": false
+    },
+    {
+      "groupName": "esbuild",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["esbuild"]
     }
   ],
   "baseBranches": ["develop"]
