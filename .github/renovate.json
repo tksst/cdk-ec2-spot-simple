@@ -11,6 +11,11 @@
       "groupName": "esbuild",
       "matchManagers": ["npm"],
       "matchPackageNames": ["esbuild"]
+    },
+    {
+      "groupName": "@aws-sdk/client-ec2",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["@aws-sdk/client-ec2"]
     }
   ],
   "baseBranches": ["develop"]
