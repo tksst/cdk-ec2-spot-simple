@@ -41,7 +41,7 @@
     "test:unit": "jest --ci"
   },
   "devDependencies": {
-    "@aws-sdk/client-ec2": "3.241.0",
+    "@aws-sdk/client-ec2": "3.264.0",
     "@secretlint/secretlint-rule-preset-recommend": "6.2.0",
     "@semantic-release/changelog": "6.0.2",
     "@semantic-release/exec": "6.0.3",
