@@ -57,7 +57,7 @@
     "aws-cdk-lib": "2.24.0",
     "better-typescript-lib": "2.2.0",
     "constructs": "10.0.9",
-    "esbuild": "0.16.13",
+    "esbuild": "0.17.5",
     "eslint": "8.33.0",
     "jest": "29.4.1",
     "jsii": "1.74.0",
