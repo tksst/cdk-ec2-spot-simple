@@ -854,7 +854,7 @@ exports[`SpotRequestType.PERSISTENT 1`] = `
           "S3Bucket": {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "b1aafc815677a134aaacf60521954ba63bd9dba11047c9d697fcb1c55a4a0e95.zip",
+          "S3Key": "a5b0e3a3611c741890c4e89cf4ce2bbe41b38d9c81b42a10543ded91b9a5dde9.zip",
         },
         "Handler": "index.handler",
         "MemorySize": 128,
