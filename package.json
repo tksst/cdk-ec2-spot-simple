@@ -24,7 +24,7 @@
     "clean": "tss-rmrf ./dist/ ./dist-jsii/",
     "build": "run-p --continue-on-error --print-label build:*",
     "build:jsii": "jsii",
-    "build:lambda": "esbuild ./src/lambda/index.ts --bundle --sourcemap --target=node16 --platform=node --tsconfig=tsconfig.lint-and-lambda.json --minify-syntax --minify-whitespace --outfile=dist/lambda/index.js",
+    "build:lambda": "esbuild ./src/lambda/index.ts --bundle --sourcemap --target=node16 --platform=node --tsconfig=tsconfig.lint-and-lambda.json --minify --outfile=dist/lambda/index.js",
     "package": "run-s clean build:lambda package:jsii",
     "package:jsii": "jsii-pacmak",
     "prepack": "pnpm build",
