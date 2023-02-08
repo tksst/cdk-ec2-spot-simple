@@ -16,6 +16,14 @@ CDK construct library to create EC2 Spot Instances simply.
 npm install cdk-ec2-spot-simple
 ```
 
+```shell
+pnpm add cdk-ec2-spot-simple
+```
+
+```shell
+yarn add cdk-ec2-spot-simple
+```
+
 ### Python
 
 ```shell
@@ -49,7 +57,7 @@ To set up a spot instance with default parameters, simply use "SpotInstance" ins
 
 ```typescript
 import { SpotInstance } from "cdk-ec2-spot-simple"
-import * as ec2 from "aws-cdk-lib/ec2"
+import * as ec2 from "aws-cdk-lib/aws-ec2"
 
 // Simple usage
 new SpotInstance(this, "DefaultConfigSpotInstance", {
@@ -81,7 +89,7 @@ new SpotInstance(this, "StoppableSpotInstance", {
 
 ## Background
 
-The `Instance` construct in `aws-cdk-lib/ec2` does not have any spot instance functionality.
+The `Instance` construct in `aws-cdk-lib/aws-ec2` does not have any spot instance functionality.
 
 This `SpotInstance` construct creates `LaunchTemplate` that is enabled spot request internally and associate with `Instance`.
 
