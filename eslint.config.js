@@ -1,29 +1,15 @@
-/** @type {import('eslint').Linter.Config} */
+const { preset } = require("@tksst/eslint-config");
 
-module.exports = {
-    root: true,
-    env: {
-        // Your project environment settings here.
-        // See ESLint document of "Specifying Environments":
-        // https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments
-
-        // example:
-        es2022: true,
-        node: true,
-        jest: true,
+module.exports = [
+    ...preset.typeScript({ jsIsCjs: true }),
+    {
+        languageOptions: {
+            parserOptions: {
+                project: "./tsconfig.lint-and-lambda.json",
+            },
+        },
+        rules: {
+            "no-new": "off",
+        },
     },
-    parserOptions: {
-        project: "./tsconfig.lint-and-lambda.json",
-        // Your project environment settings here.
-        // See ESLint document of "Specifying Parser Options":
-        // https://eslint.org/docs/latest/user-guide/configuring/language-options#specifying-parser-options
-
-        // example:
-        sourceType: "module",
-        ecmaVersion: "latest",
-    },
-    extends: "@tksst",
-    rules: {
-        "no-new": "off",
-    },
-};
+];

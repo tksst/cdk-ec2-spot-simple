@@ -1,7 +1,5 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import "source-map-support/register";
 
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { CancelSpotInstanceRequestsCommand, DescribeInstancesCommand, EC2Client } from "@aws-sdk/client-ec2/dist-es";
 import type { CdkCustomResourceEvent, CdkCustomResourceResponse } from "aws-lambda";
 
