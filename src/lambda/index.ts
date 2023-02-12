@@ -1,12 +1,9 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import "source-map-support/register";
 
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { CancelSpotInstanceRequestsCommand, DescribeInstancesCommand, EC2Client } from "@aws-sdk/client-ec2";
+import { CancelSpotInstanceRequestsCommand, DescribeInstancesCommand, EC2Client } from "@aws-sdk/client-ec2/dist-es";
 import type { CdkCustomResourceEvent, CdkCustomResourceResponse } from "aws-lambda";
 
 export const handler = async (event: CdkCustomResourceEvent): Promise<CdkCustomResourceResponse> => {
-    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     console.log(`Event: ${JSON.stringify(event, null, 2)}`);
 
     const instanceId = event.ResourceProperties.ec2InstanceId as string;
