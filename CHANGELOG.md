@@ -1,3 +1,11 @@
+## [2.0.3](https://github.com/tksst/cdk-ec2-spot-simple/compare/v2.0.2...v2.0.3) (2023-02-12)
+
+
+### Performance Improvements
+
+* reduce bundle size of Lambda code from 2.8MiB to 388KiB by enabling esbuild tree shaking through the AWS SDK ESM export import. ([ccfe8f3](https://github.com/tksst/cdk-ec2-spot-simple/commit/ccfe8f392bf89373ed941f4d8d7fa2d1d5bf7ec5))
+* reduce bundle size of Lambda code from 4.8MiB to 2.8MiB by enabling esbuild minify-identifiers. ([39f5fda](https://github.com/tksst/cdk-ec2-spot-simple/commit/39f5fda05fc602cf067781f92e2ff5a919b56b9a))
+
 ## [2.0.2](https://github.com/tksst/cdk-ec2-spot-simple/compare/v2.0.1...v2.0.2) (2023-01-04)
 
 
