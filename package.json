@@ -58,6 +58,7 @@
     "better-typescript-lib": "2.2.0",
     "constructs": "10.0.9",
     "esbuild": "0.16.13",
+    "esbuild-plugin-copy-licenses": "0.0.1",
     "eslint": "8.31.0",
     "jest": "29.3.1",
     "jsii": "1.72.0",

@@ -1,4 +1,5 @@
 import { build } from "esbuild";
+import copyLicenses from "esbuild-plugin-copy-licenses";
 
 await build({
     logLevel: "info",
@@ -10,4 +11,5 @@ await build({
     tsconfig: "tsconfig.lint-and-lambda.json",
     minify: true,
     outfile: "dist/lambda/index.js",
+    plugins: [copyLicenses()],
 });

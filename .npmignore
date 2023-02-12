@@ -18,7 +18,7 @@
 *.test.d.cts
 *.test.d.cts.map
 **/__snapshots__/**
-
+!/LICENSE-BUNDLED-DEPENDENCIES/
 
 # Exclude jsii outdir
 dist-jsii
