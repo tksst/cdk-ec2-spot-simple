@@ -4,7 +4,6 @@ import { CancelSpotInstanceRequestsCommand, DescribeInstancesCommand, EC2Client 
 import type { CdkCustomResourceEvent, CdkCustomResourceResponse } from "aws-lambda";
 
 export const handler = async (event: CdkCustomResourceEvent): Promise<CdkCustomResourceResponse> => {
-    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     console.log(`Event: ${JSON.stringify(event, null, 2)}`);
 
     const instanceId = event.ResourceProperties.ec2InstanceId as string;
