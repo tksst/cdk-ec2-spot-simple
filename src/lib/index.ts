@@ -84,8 +84,6 @@ class SpotReqCanceler extends Construct {
         const runtime = props.lambdaRuntime ?? defaultRuntime;
 
         if (runtime.family !== RuntimeFamily.NODEJS) {
-            // better-typescript-lib@2.2.0 + @typescript-eslint/no-throw-literal causes error, so temporarily disalbe it
-            // eslint-disable-next-line @typescript-eslint/no-throw-literal
             throw new Error("A runtime other than Node.js was specified.");
         }
 
