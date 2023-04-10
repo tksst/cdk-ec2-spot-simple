@@ -75,7 +75,7 @@
     "aws-cdk-lib": "^2.24.0",
     "constructs": "^10.0.9"
   },
-  "packageManager": "pnpm@7.27.0",
+  "packageManager": "pnpm@7.32.0",
   "engines": {
     "node": ">= 14"
   },
