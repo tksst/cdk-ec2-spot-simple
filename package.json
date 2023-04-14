@@ -67,7 +67,7 @@
     "prettier": "2.8.4",
     "publib": "0.2.593",
     "secretlint": "6.2.3",
-    "semantic-release": "20.1.0",
+    "semantic-release": "21.0.1",
     "source-map-support": "0.5.21",
     "typescript": "5.0.2"
   },
