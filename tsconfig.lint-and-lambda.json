@@ -5,7 +5,6 @@
     "declarationMap": true,
     "types": ["node", "jest"],
     "alwaysStrict": true,
-    "charset": "utf8",
     "declaration": true,
     "experimentalDecorators": true,
     "incremental": true,

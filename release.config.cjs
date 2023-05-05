@@ -15,7 +15,7 @@ const pluginsRelease = [
 const plubinsPreRelease = pluginsRelease.filter((it) => it !== "@semantic-release/changelog");
 
 const config = {
-    branches: ["master", { name: "alpha", prerelease: true }],
+    branches: ["main", { name: "alpha", prerelease: true }],
 };
 
 if (config.branches.some((it) => it === branch || (it.name === branch && !it.prerelease))) {
