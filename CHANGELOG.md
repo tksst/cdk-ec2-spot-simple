@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/tksst/cdk-ec2-spot-simple/compare/v2.0.3...v2.0.4) (2023-05-05)
+
+
+### Bug Fixes
+
+* remove the reprecated "charset" option that causes an error on TypeScript 5.0 ([be7b96e](https://github.com/tksst/cdk-ec2-spot-simple/commit/be7b96eab451dd45edca3fa528f0e7c6e900755f))
+
 ## [2.0.3](https://github.com/tksst/cdk-ec2-spot-simple/compare/v2.0.2...v2.0.3) (2023-02-12)
 
 
