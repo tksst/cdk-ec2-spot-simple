@@ -29,8 +29,8 @@ devDependencies:
     specifier: 1.1.0
     version: 1.1.0(prettier@2.8.7)
   '@tksst/typescript-starter-configs':
-    specifier: 2.1.0
-    version: 2.1.0
+    specifier: 3.1.0
+    version: 3.1.0
   '@types/aws-lambda':
     specifier: 8.10.114
     version: 8.10.114
@@ -2585,8 +2585,9 @@ packages:
       prettier: 2.8.7
     dev: true
 
-  /@tksst/typescript-starter-configs@2.1.0:
-    resolution: {integrity: sha512-CEhv4olA/DCBUFvplE4xoC1Rkb3zQr1jaGfk16lCK7qtiGqiUbUYwyB6Y2+TCaUUNn/DI9EuaXms7/oF5qgyoA==}
+  /@tksst/typescript-starter-configs@3.1.0:
+    resolution: {integrity: sha512-jV3UckOUKQYQcTjmEnoiuFYzAT9+bXi8UoBdKyMRFVRc0veFzq3tNVenF/JHnDPZIEV39ny3/nUsLI+26Di5aA==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     hasBin: true
     dev: true
 
