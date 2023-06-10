@@ -1,0 +1,4 @@
+{
+  "maxWorkers": 10,
+  "parallelRegions": ["ap-northeast-1", "us-west-2"]
+}

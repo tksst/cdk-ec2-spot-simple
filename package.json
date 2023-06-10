@@ -41,6 +41,8 @@
     "test:unit": "jest --ci"
   },
   "devDependencies": {
+    "@aws-cdk/integ-runner": "2.66.1",
+    "@aws-cdk/integ-tests-alpha": "2.66.1-alpha.0",
     "@aws-sdk/client-ec2": "3.269.0",
     "@secretlint/secretlint-rule-preset-recommend": "6.2.3",
     "@semantic-release/changelog": "6.0.2",
@@ -54,7 +56,8 @@
     "@types/aws-lambda": "8.10.110",
     "@types/jest": "29.4.0",
     "@types/node": "14.18.36",
-    "aws-cdk-lib": "2.24.0",
+    "aws-cdk": "2.66.1",
+    "aws-cdk-lib": "2.66.1",
     "better-typescript-lib": "2.2.1",
     "constructs": "10.0.9",
     "esbuild": "0.17.7",
@@ -69,6 +72,8 @@
     "secretlint": "6.2.3",
     "semantic-release": "20.1.0",
     "source-map-support": "0.5.21",
+    "ts-node": "10.9.1",
+    "tsx": "3.12.3",
     "typescript": "4.9.5"
   },
   "peerDependencies": {
