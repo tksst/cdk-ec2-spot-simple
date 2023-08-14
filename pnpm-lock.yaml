@@ -66,8 +66,8 @@ devDependencies:
     specifier: 29.5.0
     version: 29.5.0(@types/node@14.18.42)
   jsii:
-    specifier: 1.80.0
-    version: 1.80.0
+    specifier: 5.1.10
+    version: 5.1.10
   jsii-pacmak:
     specifier: 1.80.0
     version: 1.80.0
@@ -1908,12 +1908,27 @@ packages:
     engines: {node: '>= 14.6.0'}
     dependencies:
       chalk: 4.1.2
-      semver: 7.3.8
+      semver: 7.5.4
+    dev: true
+
+  /@jsii/check-node@1.85.0:
+    resolution: {integrity: sha512-dOrye7NuafkHADt3jk0TxMu/2sOHXxOYTwAuKj9L1/Te1xFfw2fzni80J12rTBQeVQxLVFNgDynsl2J7cuFFtQ==}
+    engines: {node: '>= 14.17.0'}
+    dependencies:
+      chalk: 4.1.2
+      semver: 7.5.4
     dev: true
 
   /@jsii/spec@1.80.0:
     resolution: {integrity: sha512-BkRHjwxwnmRRVA0rx3XFH9iPvEF+AvJGq21uic6qT8lWJEpM82aRse6hGHMofJstP1X3ChRmfmg8JELvHB0gzA==}
     engines: {node: '>= 14.6.0'}
+    dependencies:
+      ajv: 8.12.0
+    dev: true
+
+  /@jsii/spec@1.87.0:
+    resolution: {integrity: sha512-fhTT3IYmjyRKvUUWffBIuGDVVfyKC+QfE1cMyExSHl7l6wk6unrxS8qsU23kaJ5bNQAnlc2+CE1HteY2SLbepg==}
+    engines: {node: '>= 14.17.0'}
     dependencies:
       ajv: 8.12.0
     dev: true
@@ -2279,7 +2294,7 @@ packages:
       read-pkg: 8.0.0
       registry-auth-token: 5.0.1
       semantic-release: 21.0.1
-      semver: 7.3.8
+      semver: 7.5.4
       tempy: 3.0.0
     dev: true
 
@@ -2764,7 +2779,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.3.8
+      semver: 7.5.4
       tsutils: 3.21.0(typescript@5.0.4)
       typescript: 5.0.4
     transitivePeerDependencies:
@@ -2806,7 +2821,7 @@ packages:
       '@typescript-eslint/typescript-estree': 5.58.0(typescript@5.0.4)
       eslint: 8.38.0
       eslint-scope: 5.1.1
-      semver: 7.3.8
+      semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -3688,6 +3703,15 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       is-obj: 2.0.0
+    dev: true
+
+  /downlevel-dts@0.11.0:
+    resolution: {integrity: sha512-vo835pntK7kzYStk7xUHDifiYJvXxVhUapt85uk2AI94gUUAQX9HNRtrcMHNSc3YHJUEHGbYIGsM99uIbgAtxw==}
+    hasBin: true
+    dependencies:
+      semver: 7.5.4
+      shelljs: 0.8.5
+      typescript: 5.3.0-dev.20230814
     dev: true
 
   /duplexer2@0.1.4:
@@ -4720,6 +4744,11 @@ packages:
       side-channel: 1.0.4
     dev: true
 
+  /interpret@1.4.0:
+    resolution: {integrity: sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==}
+    engines: {node: '>= 0.10'}
+    dev: true
+
   /into-stream@6.0.0:
     resolution: {integrity: sha512-XHbaOAvP+uFKUFsOgoNPRjLkwB+I22JFPFe5OjTkQ0nwgj6+pSjb4NmB6VMxaPshLiOf+zcpOCBQuLwC1KHhZA==}
     engines: {node: '>=10'}
@@ -5356,7 +5385,7 @@ packages:
       jest-util: 29.5.0
       natural-compare: 1.4.0
       pretty-format: 29.5.0
-      semver: 7.3.8
+      semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -5516,7 +5545,7 @@ packages:
       commonmark: 0.30.0
       fast-glob: 3.2.12
       jsii: 1.80.0
-      semver: 7.3.8
+      semver: 7.5.4
       semver-intersect: 1.4.0
       stream-json: 1.7.5
       typescript: 3.9.10
@@ -5538,12 +5567,34 @@ packages:
       fast-deep-equal: 3.1.3
       fs-extra: 10.1.0
       log4js: 6.9.1
-      semver: 7.3.8
+      semver: 7.5.4
       semver-intersect: 1.4.0
       sort-json: 2.0.1
       spdx-license-list: 6.6.0
       typescript: 3.9.10
       yargs: 16.2.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /jsii@5.1.10:
+    resolution: {integrity: sha512-OvFBUj0V7H+ex7yGyg8bJwghiHnE/T8DmQBxJxUG6qApwKP9lJE+jSz0ONKuqdaxTK1RaLbZhatLkCRrkQrbJQ==}
+    engines: {node: '>= 16.14.0'}
+    hasBin: true
+    dependencies:
+      '@jsii/check-node': 1.85.0
+      '@jsii/spec': 1.87.0
+      case: 1.6.3
+      chalk: 4.1.2
+      downlevel-dts: 0.11.0
+      fast-deep-equal: 3.1.3
+      log4js: 6.9.1
+      semver: 7.5.4
+      semver-intersect: 1.4.0
+      sort-json: 2.0.1
+      spdx-license-list: 6.6.0
+      typescript: 5.1.6
+      yargs: 17.7.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -5978,7 +6029,7 @@ packages:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.11.0
-      semver: 7.3.8
+      semver: 7.5.4
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -5988,7 +6039,7 @@ packages:
     dependencies:
       hosted-git-info: 6.1.1
       is-core-module: 2.11.0
-      semver: 7.3.8
+      semver: 7.5.4
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -6613,6 +6664,13 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
+  /rechoir@0.6.2:
+    resolution: {integrity: sha512-HFM8rkZ+i3zrV+4LQjwQ0W+ez98pApMGM3HUrN04j3CqzPOzl9nmP15Y8YXNm8QHGv/eacOVEjqhmWpkRV0NAw==}
+    engines: {node: '>= 0.10'}
+    dependencies:
+      resolve: 1.22.1
+    dev: true
+
   /redent@3.0.0:
     resolution: {integrity: sha512-6tDA8g98We0zd0GvVeMT9arEOnTw9qM03L9cJXaCjrip1OO764RDBLBfrB4cwzNGDj5OA5ioymC9GkizgWJDUg==}
     engines: {node: '>=8'}
@@ -6794,7 +6852,7 @@ packages:
     resolution: {integrity: sha512-0Ju4+6A8iOnpL/Thra7dZsSlOHYAHIeMxfhWQRI1/VLcT3WDBZKKtQt/QkBOsiIN9ZpuvHE6cGZ0x4glCMmfiA==}
     engines: {node: '>=12'}
     dependencies:
-      semver: 7.3.8
+      semver: 7.5.4
     dev: true
 
   /semver-intersect@1.4.0:
@@ -6860,6 +6918,16 @@ packages:
 
   /shell-quote@1.8.0:
     resolution: {integrity: sha512-QHsz8GgQIGKlRi24yFc6a6lN69Idnx634w49ay6+jA5yFh7a1UY+4Rp6HPx/L/1zcEDPEij8cIsiqR6bQsE5VQ==}
+    dev: true
+
+  /shelljs@0.8.5:
+    resolution: {integrity: sha512-TiwcRcrkhHvbrZbnRcFYMLl30Dfov3HKqzp5tO5b4pt6G/SezKcYhmDg15zXVBswHmctSAQKznqNW2LO5tTDow==}
+    engines: {node: '>=4'}
+    hasBin: true
+    dependencies:
+      glob: 7.2.3
+      interpret: 1.4.0
+      rechoir: 0.6.2
     dev: true
 
   /shlex@2.1.2:
@@ -7404,6 +7472,18 @@ packages:
     hasBin: true
     dev: true
 
+  /typescript@5.1.6:
+    resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
+
+  /typescript@5.3.0-dev.20230814:
+    resolution: {integrity: sha512-ztAo8S7pDTqodkSIPPdh4mL5T7+//1xfOP17O2yFW3dx3u/87MG4qsiZ5HIOoV0L9Kkr/fFw5bqGXHcDT/Nclg==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
+
   /uglify-js@3.17.4:
     resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
     engines: {node: '>=0.8.0'}
@@ -7629,6 +7709,19 @@ packages:
 
   /yargs@17.6.2:
     resolution: {integrity: sha512-1/9UrdHjDZc0eOU0HxOHoS78C69UD3JRMvzlJ7S79S2nTaWRA/whGCTV8o9e/N/1Va9YIV7Q4sOxD8VV4pCWOw==}
+    engines: {node: '>=12'}
+    dependencies:
+      cliui: 8.0.1
+      escalade: 3.1.1
+      get-caller-file: 2.0.5
+      require-directory: 2.1.1
+      string-width: 4.2.3
+      y18n: 5.0.8
+      yargs-parser: 21.1.1
+    dev: true
+
+  /yargs@17.7.2:
+    resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
     engines: {node: '>=12'}
     dependencies:
       cliui: 8.0.1
