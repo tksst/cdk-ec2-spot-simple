@@ -16,20 +16,21 @@ on:
       - alpha
 
 jobs:
-  build-test:
-    name: Build, Lint and Test
+  test:
+    name: Test
     uses: tksst/github-actions-workflows/.github/workflows/nodejs-pnpm.yml@4519d724fd3e9b0295f9407d5b48f019d1d43033
     with:
-      job-title: Build, Lint and Test
+      job-title: Test
+      pnpm-commands: '[ "test" ]'
       os: '[ "ubuntu-22.04", "windows-latest" ]'
       force: ${{ inputs.force == true }}
 
-  package:
-    name: Package
+  lint-build-package:
+    name: Lint, Build and Package
     uses: tksst/github-actions-workflows/.github/workflows/nodejs-pnpm.yml@4519d724fd3e9b0295f9407d5b48f019d1d43033
     with:
-      job-title: Package
-      pnpm-commands: '[ "package" ]'
+      job-title: Lint, Build and Package
+      pnpm-commands: '[ "lint", "build", "package" ]'
       os: '[ "ubuntu-22.04" ]'
       node-versions: '[ "18" ]'
       force: ${{ inputs.force == true}}
