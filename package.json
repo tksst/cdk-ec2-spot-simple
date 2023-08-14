@@ -55,7 +55,6 @@
     "@types/jest": "29.5.0",
     "@types/node": "14.18.42",
     "aws-cdk-lib": "2.24.0",
-    "better-typescript-lib": "2.3.0",
     "constructs": "10.0.9",
     "esbuild": "0.17.7",
     "esbuild-plugin-copy-licenses": "0.0.1",
