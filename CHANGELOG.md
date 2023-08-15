@@ -1,3 +1,5 @@
+# cdk-ec2-spot-simple
+
 ## [2.0.4](https://github.com/tksst/cdk-ec2-spot-simple/compare/v2.0.3...v2.0.4) (2023-05-05)
 
 
@@ -27,7 +29,7 @@
 
 * This is a dummy commit that triggers automatic release. On v2.0.0 there was a bug where the wrong version was released, that was fixed on 5ee6cc20e718d0eee62571cb64d5d74e305c8aa7 ([41054c2](https://github.com/tksst/cdk-ec2-spot-simple/commit/41054c237be9663dff8cd9af1e3c1e2a7ffcc363))
 
-# [2.0.0](https://github.com/tksst/cdk-ec2-spot-simple/compare/v1.0.0...v2.0.0) (2023-01-03)
+## [2.0.0](https://github.com/tksst/cdk-ec2-spot-simple/compare/v1.0.0...v2.0.0) (2023-01-03)
 
 
 ### Features
@@ -40,7 +42,7 @@
 
 * Each property of SpotInstanceProps and SpotReqCancelerProps is now read only.
 
-# 1.0.0 (2022-12-13)
+## 1.0.0 (2022-12-13)
 
 
 ### Bug Fixes
