@@ -2,7 +2,8 @@
   "name": "cdk-ec2-spot-simple",
   "version": "2.0.4",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "description": "CDK construct library to create EC2 Spot Instances simply.",
   "keywords": [

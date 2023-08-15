@@ -13,7 +13,6 @@ on:
   push:
     branches-ignore:
       - main
-      - alpha
 
 jobs:
   test:

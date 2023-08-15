@@ -3,7 +3,13 @@ on:
   push:
     branches:
       - main
-      - alpha
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Force the other language packages to be published
+        default: false
+        required: false
+        type: boolean
 
 jobs:
   build-test-package:
@@ -11,13 +17,16 @@ jobs:
 
   release:
     needs: build-test-package
+    permissions:
+      # provenance
+      id-token: write
+      # create a PR
+      contents: write
+      pull-requests: write
     runs-on: ubuntu-22.04
 
     steps:
       - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
-        with:
-          # fetch all history
-          fetch-depth: 0
 
       - name: Setup pnpm
         uses: pnpm/action-setup@c3b53f6a16e57305370b4ae5a540c2077a1d50dd # tag=v2.2.4
@@ -30,12 +39,29 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Release
+      - name: build for npm
+        run: pnpm build
+
+      - name: Create Release Pull Request or Publish to npm
+        id: publish-with-changesets-action
+        uses: changesets/action@f13b1baaa620fde937751f5d2c3572b9da32af23 # v1.4.5
+        with:
+          publish: pnpm exec changeset publish
         env:
-          # @semantic-release/github and Go publish
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NPM
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: make packages
+        if: steps.publish-with-changesets-action.outputs.published == 'true' || inputs.force == true
+        run: pnpm package
+
+      - name: publish to the other packages
+        if: steps.publish-with-changesets-action.outputs.published == 'true' || inputs.force == true
+        run: rm -rf dist-jsii/js && pnpm exec publib dist-jsii
+        env:
+          # Go publish
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           # Java
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
@@ -51,5 +77,3 @@ jobs:
           GIT_USER_EMAIL: github-actions[bot]@users.noreply.github.com
           # dotnet
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-
-        run: pnpm exec semantic-release
