@@ -17,6 +17,5 @@
       "matchManagers": ["npm"],
       "matchPackageNames": ["@aws-sdk/client-ec2"]
     }
-  ],
-  "baseBranches": ["develop"]
+  ]
 }
