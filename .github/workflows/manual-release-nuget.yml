@@ -7,24 +7,13 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@c3b53f6a16e57305370b4ae5a540c2077a1d50dd # tag=v2.2.4
-
-      - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
+      - uses: tksst/github-actions-workflows/actions/setup-pnpm-project@4d3055bc0622325eb8d538659de8c78957a73a2a
         with:
           node-version: 18
-          cache: pnpm
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - run: pnpm build
 
-      - name: build for npm
-        run: pnpm build
-
-      - name: make packages
-        run: pnpm package
+      - run: pnpm package
 
       - name: publish to NuGet
         run: pnpm exec publib-nuget dist-jsii/dotnet
