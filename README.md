@@ -56,31 +56,30 @@ go get github.com/tksst/cdk-ec2-spot-simple-go/cdkec2spotsimple/v2
 To set up a spot instance with default parameters, simply use "SpotInstance" instead of "ec2.Instance".
 
 ```typescript
-import { SpotInstance } from "cdk-ec2-spot-simple"
-import * as ec2 from "aws-cdk-lib/aws-ec2"
+import { SpotInstance } from "cdk-ec2-spot-simple";
+import * as ec2 from "aws-cdk-lib/aws-ec2";
 
 // Simple usage
 new SpotInstance(this, "DefaultConfigSpotInstance", {
-    // Required properties of "ec2.Instance"
-    vpc: ec2.Vpc.fromLookup(this, "defaultVPC", { isDefault: true });,
-    instanceType: ec2.InstanceType.of(ec2.InstanceClass.T3A, ec2.InstanceSize.NANO),
-    machineImage: new ec2.AmazonLinuxImage(),
+  // Required properties of "ec2.Instance"
+  vpc: ec2.Vpc.fromLookup(this, "defaultVPC", { isDefault: true }),
+  instanceType: ec2.InstanceType.of(ec2.InstanceClass.T3A, ec2.InstanceSize.NANO),
+  machineImage: new ec2.AmazonLinuxImage()
 });
 
 // Advanced usage
 new SpotInstance(this, "StoppableSpotInstance", {
-    // Required properties of "ec2.Instance"
-    vpc: ec2.Vpc.fromLookup(this, "defaultVPC", { isDefault: true });,
-    instanceType: ec2.InstanceType.of(ec2.InstanceClass.T3A, ec2.InstanceSize.NANO),
-    machineImage: new ec2.AmazonLinuxImage(),
-    // SpotInstance specific property
-    spotOptions: {
-        interruptionBehavior: ec2.SpotInstanceInterruption.STOP,
-        requestType: ec2.SpotRequestType.PERSISTENT,
-        maxPrice: 0.007,
-    },
+  // Required properties of "ec2.Instance"
+  vpc: ec2.Vpc.fromLookup(this, "defaultVPC", { isDefault: true }),
+  instanceType: ec2.InstanceType.of(ec2.InstanceClass.T3A, ec2.InstanceSize.NANO),
+  machineImage: new ec2.AmazonLinuxImage(),
+  // SpotInstance specific property
+  spotOptions: {
+    interruptionBehavior: ec2.SpotInstanceInterruption.STOP,
+    requestType: ec2.SpotRequestType.PERSISTENT,
+    maxPrice: 0.007
+  }
 });
-
 ```
 
 ## API document
