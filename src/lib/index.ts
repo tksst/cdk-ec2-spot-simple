@@ -4,12 +4,14 @@ import { CustomResource, Stack } from "aws-cdk-lib";
 import type { InstanceProps, LaunchTemplateSpotOptions } from "aws-cdk-lib/aws-ec2";
 import { Instance, LaunchTemplate, SpotRequestType } from "aws-cdk-lib/aws-ec2";
 import * as iam from "aws-cdk-lib/aws-iam";
-import { Architecture, Code, Function, Runtime, RuntimeFamily } from "aws-cdk-lib/aws-lambda";
+import type { Runtime } from "aws-cdk-lib/aws-lambda";
+import { Architecture, Code, Function, RuntimeFamily } from "aws-cdk-lib/aws-lambda";
 import { RetentionDays } from "aws-cdk-lib/aws-logs";
 import { Provider } from "aws-cdk-lib/custom-resources";
 import { Construct } from "constructs";
 
-const defaultRuntime = Runtime.NODEJS_16_X;
+import getDefaultRuntime from "./getDefaultRuntime.js";
+
 const defaultLogRetention = RetentionDays.THREE_MONTHS;
 
 /**
@@ -81,7 +83,7 @@ class SpotReqCanceler extends Construct {
 
         const logRetention = props.lambdaLogRetention ?? defaultLogRetention;
 
-        const runtime = props.lambdaRuntime ?? defaultRuntime;
+        const runtime = props.lambdaRuntime ?? getDefaultRuntime(this);
 
         if (runtime.family !== RuntimeFamily.NODEJS) {
             throw new Error("A runtime other than Node.js was specified.");
