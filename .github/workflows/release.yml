@@ -11,6 +11,8 @@ on:
         required: false
         type: boolean
 
+concurrency: release
+
 jobs:
   build-test-package:
     uses: ./.github/workflows/build-test.yml
