@@ -17,7 +17,7 @@ on:
 jobs:
   test:
     name: Test
-    uses: tksst/github-actions-workflows/.github/workflows/nodejs-pnpm.yml@4519d724fd3e9b0295f9407d5b48f019d1d43033
+    uses: tksst/github-actions-workflows/.github/workflows/nodejs-pnpm.yml@6da3b9300d3cc7d7cfb1108c7f5b3783b2a18826
     with:
       job-title: Test
       pnpm-commands: '[ "test" ]'
@@ -26,7 +26,7 @@ jobs:
 
   lint-build-package:
     name: Lint, Build and Package
-    uses: tksst/github-actions-workflows/.github/workflows/nodejs-pnpm.yml@4519d724fd3e9b0295f9407d5b48f019d1d43033
+    uses: tksst/github-actions-workflows/.github/workflows/nodejs-pnpm.yml@6da3b9300d3cc7d7cfb1108c7f5b3783b2a18826
     with:
       job-title: Lint, Build and Package
       pnpm-commands: '[ "lint", "build", "package" ]'
