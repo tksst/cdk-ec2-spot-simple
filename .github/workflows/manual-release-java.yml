@@ -4,7 +4,7 @@ on:
 
 jobs:
   release:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
       - uses: tksst/github-actions-workflows/actions/setup-pnpm-project@4d3055bc0622325eb8d538659de8c78957a73a2a
