@@ -47,7 +47,7 @@
     "@secretlint/secretlint-rule-preset-recommend": "8.1.2",
     "@swc/core": "1.4.2",
     "@swc/jest": "0.2.36",
-    "@tksst/eslint-config": "13.0.0",
+    "@tksst/eslint-config": "14.0.0",
     "@tksst/prettier-config": "1.1.0",
     "@tksst/project-configs": "4.0.1",
     "@types/aws-lambda": "8.10.134",
@@ -64,7 +64,7 @@
     "npm-run-all2": "6.1.2",
     "prettier": "3.2.5",
     "publib": "0.2.799",
-    "secretlint": "8.1.2",
+    "secretlint": "14.1.0",
     "source-map-support": "0.5.21",
     "typescript": "5.3.3"
   },
